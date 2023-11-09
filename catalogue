@@ -1,0 +1,5051 @@
+<html>
+  <head>
+    <style>
+       #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  body {
+  background-color: rgb(232, 237, 238);
+  opacity: 1;
+}
+  #menu {
+    float: left;
+  }
+  
+  #aboutUs {
+    float: left;
+    margin-left: 20px;
+    order: 2;
+  }
+  
+  #projectTitle {
+    text-align: center;
+    font-size: 24px;
+    order: 1;
+    color: rgb(8, 8, 88);
+  }
+ tr:nth-child(even) {
+  background-color: #d8d2d2e8;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0eeee;
+}
+
+  tr:hover {
+  background-color: #f7afaf;
+    }
+      
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+        <div id="menu">
+          <a href="#">Menu</a>
+        </div>
+        <div id="aboutUs">
+          <a href="#" onclick="window.location='https://alexanmv.github.io/Kurimu.github.io/'">About us</a>
+        </div>
+        <div id="projectTitle">
+          Kurimu-catalogue
+        </div>
+      </div>
+      <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for pangenome...">
+    <table id="myTable">
+      <tr>
+        <th><a href="#" onclick="sortTable(0)">Pangenome</a></th>
+        <th><a href="#" onclick="sortTable(1)">Unique ID</a></th>
+        <th><a href="#" onclick="sortTable(2)">NCBI_txid</a></th>
+        <th><a href="#" onclick="sortTable(3)">effective</a></th>
+        <th><a href="#" onclick="sortTable(4)">level</a></th>
+        <th><a href="#" onclick="sortTable(5)">pan</a></th>
+        <th><a href="#" onclick="sortTable(6)">core</a></th>
+        <th><a href="#" onclick="sortTable(7)">peripheral</a></th>
+        <th><a href="#" onclick="sortTable(8)">unique</a></th>
+        <th><a href="#" onclick="sortTable(9)">core_pan</a></th>
+        <th><a href="#" onclick="sortTable(10)">shell_eff</a></th>
+        <th><a href="#" onclick="sortTable(11)">reference</a></th>
+        <th><a href="#" onclick="sortTable(12)">DOI</a></th>
+        <th><a href="#" onclick="sortTable(13)">Gene_Cluster</a></th>
+        <th><a href="#" onclick="sortTable(14)">DS1</a></th>
+        <th><a href="#" onclick="sortTable(15)">DS2</a></th>
+        <th><a href="#" onclick="sortTable(16)">DS3</a></th>
+        <th><a href="#" onclick="sortTable(17)">DS4</a></th>
+      </tr>
+        <tr>
+            <td>Streptococcus pneumoniae</td>
+            <td>6eb02c68ab4e75c27fc7724a43263bda</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1313'">1313</a></td>
+            <td>937</td>
+            <td>population</td>
+            <td>8674</td>
+            <td>1111</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>12.81</td>
+            <td>-11</td>
+            <td>Azarian 2018</td>
+            <td>https://doi.org/10.1371/journal.ppat.1006966</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Cyanobacteria</td>
+            <td>d20d1f59f7e0dd1978bbaeef02d3cd36</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1117'">1117</a></td>
+            <td>76</td>
+            <td>phylum</td>
+            <td>58740</td>
+            <td>621</td>
+            <td>20005</td>
+            <td>38114</td>
+            <td>1.06</td>
+            <td>501.5</td>
+            <td>Beck 2018</td>
+            <td>https://doi.org/10.1371/journal.pgen.1007239</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Geobacillus</td>
+            <td>c11583b0d438ce72b91fcbe97932a7f8</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1891658'">1891658</a></td>
+            <td>29</td>
+            <td>genus</td>
+            <td>13595</td>
+            <td>1862</td>
+            <td>3515</td>
+            <td>8218</td>
+            <td>13.7</td>
+            <td>283.38</td>
+            <td>Bezuidt 2016</td>
+            <td>https://doi.org/10.3389/fmicb.2016.00723</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium botulinum</td>
+            <td>c0ac2082759bdd48da2654e319489af5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1491'">1491</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>41382</td>
+            <td>13590</td>
+            <td>24061</td>
+            <td>3731</td>
+            <td>32.84</td>
+            <td>287</td>
+            <td>Bhardwaj 2017</td>
+            <td>https://doi.org/10.1016/j.gene.2017.04.019</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter baumannii</td>
+            <td>31914acd3708d783dbd239ba72fa5a37</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470'">470</a></td>
+            <td>249</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>2833</td>
+            <td>-11</td>
+            <td>14193</td>
+            <td>-11</td>
+            <td>57</td>
+            <td>Chan 2015</td>
+            <td>https://link.springer.com/article/10.1007/s10096-014-2281-x#Abs1</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Chlamydiae</td>
+            <td>64ca6c31f5bc48ad014afb93395f4f31</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=204428'">204428</a></td>
+            <td>19</td>
+            <td>phylum</td>
+            <td>5727</td>
+            <td>560</td>
+            <td>1071</td>
+            <td>4096</td>
+            <td>9.78</td>
+            <td>215.58</td>
+            <td>Collingro 2011</td>
+            <td>https://doi.org/10.1093/molbev/msr161</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Legionella pneumophila</td>
+            <td>a9fae92bd63e1cc976a90dd1d9c41f1a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=446'">446</a></td>
+            <td>5</td>
+            <td>species</td>
+            <td>2957</td>
+            <td>1979</td>
+            <td>636</td>
+            <td>342</td>
+            <td>66.93</td>
+            <td>68.4</td>
+            <td>d’Auria 2010</td>
+            <td>https://doi.org/10.1186/1471-2164-11-181</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus thuringiensis</td>
+            <td>1cfdeecfcaf60d4dd2f6a6ca4509ebbc</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1428'">1428</a></td>
+            <td>7</td>
+            <td>species</td>
+            <td>11588</td>
+            <td>4196</td>
+            <td>3486</td>
+            <td>3906</td>
+            <td>36.21</td>
+            <td>558</td>
+            <td>Fang 2011</td>
+            <td>https://doi.org/10.1016/j.jgg.2011.11.001</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactococcus garvieae</td>
+            <td>6c17678a99c4e0bb29642f32af2745e0</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1363'">1363</a></td>
+            <td>26</td>
+            <td>species</td>
+            <td>4101</td>
+            <td>1341</td>
+            <td>1269</td>
+            <td>1491</td>
+            <td>32.7</td>
+            <td>57.35</td>
+            <td>Ferrario 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0084796</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sinorhizobium meliloti</td>
+            <td>1364ceb5c27904733efc5bef92fda00c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=382'">382</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>7824</td>
+            <td>5124</td>
+            <td>786</td>
+            <td>1914</td>
+            <td>65.49</td>
+            <td>638</td>
+            <td>Galardini 2011</td>
+            <td>https://doi.org/10.1186/1471-2164-12-235</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Brassica oleracea (genes)</td>
+            <td>b65b003fc72701e0692044fc004cd8e0</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3712'">3712</a></td>
+            <td>10</td>
+            <td>species</td>
+            <td>61379</td>
+            <td>49895</td>
+            <td>10162</td>
+            <td>1322</td>
+            <td>81.29</td>
+            <td>132.2</td>
+            <td>Golicz 2016</td>
+            <td>https://doi.org/10.1038/ncomms13390</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Brassica oleracea (families)</td>
+            <td>dc22c97ab4a3dc1a438c08fe72c18e56</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3712'">3712</a></td>
+            <td>10</td>
+            <td>species</td>
+            <td>35853</td>
+            <td>28532</td>
+            <td>6411</td>
+            <td>910</td>
+            <td>79.58</td>
+            <td>91</td>
+            <td>Golicz 2016</td>
+            <td></td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>E.coli/Shigella/S.enterica</td>
+            <td>c046a20657d9b1d57d42a82535ef4446</td>
+            <td></td>
+            <td>48</td>
+            <td>group</td>
+            <td>9916</td>
+            <td>2000</td>
+            <td>1468</td>
+            <td>6448</td>
+            <td>20.17</td>
+            <td>134.33</td>
+            <td>Gordienko 2013</td>
+            <td> https://doi.org/10.1128/JB.02285-12</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Methanobrevibacter smithii</td>
+            <td>c4f37140b5cfc26270ea394fce481f1d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2173'">2173</a></td>
+            <td>23</td>
+            <td>species</td>
+            <td>2847</td>
+            <td>987</td>
+            <td>1532</td>
+            <td>328</td>
+            <td>34.67</td>
+            <td>14.26</td>
+            <td>Hansen 2011</td>
+            <td>https://doi.org/10.1073/pnas.1000071108</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Salmonella enterica</td>
+            <td>4a3465f05ff1e26eaee90323c66a4d6a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28901'">28901</a></td>
+            <td>35</td>
+            <td>species</td>
+            <td>10015</td>
+            <td>2811</td>
+            <td>4007</td>
+            <td>3197</td>
+            <td>28.07</td>
+            <td>91.34</td>
+            <td>Jacobsen 2011</td>
+            <td>https://doi.org/10.1007/s00248-011-9880-1</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Aggregatibacter actinomycetemcomitans</td>
+            <td>af396b2f61f6f25519e2eea929f2bc2b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=714'">714</a></td>
+            <td>14</td>
+            <td>species</td>
+            <td>3301</td>
+            <td>2034</td>
+            <td>490</td>
+            <td>777</td>
+            <td>61.62</td>
+            <td>55.5</td>
+            <td>Kittichotirat 2011</td>
+            <td>https://doi.org/10.1371/journal.pone.0022420</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mycobacterium</td>
+            <td>fbf57b05acdb0549d44d902e7b5366aa</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1785'">1785</a></td>
+            <td>27</td>
+            <td>genus</td>
+            <td>20342</td>
+            <td>925</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>4.55</td>
+            <td>-11</td>
+            <td>Kweon 2015</td>
+            <td></td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mycobacterium (PAH degraders)</td>
+            <td>5611d362cbaf8875e5324fbef41a5e0a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1785'">1785</a></td>
+            <td>6</td>
+            <td>group</td>
+            <td>9532</td>
+            <td>3533</td>
+            <td>3875</td>
+            <td>2124</td>
+            <td>37.06</td>
+            <td>354</td>
+            <td>Kweon 2015</td>
+            <td>https://doi.org/10.1186/s12862-015-0302-8</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Alteromonas</td>
+            <td>163c32a39fadcfef98cbb077a136d7d8</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=226'">226</a></td>
+            <td>17</td>
+            <td>genus</td>
+            <td>9623</td>
+            <td>1795</td>
+            <td>2428</td>
+            <td>5400</td>
+            <td>18.65</td>
+            <td>317.65</td>
+            <td>Lopez-Perez 2016</td>
+            <td>https://doi.org/10.1093/gbe/evw098</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Erwinia amylovora</td>
+            <td>6a1013dee45ac485ef05310e96585eff</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=552'">552</a></td>
+            <td>12</td>
+            <td>species</td>
+            <td>5751</td>
+            <td>3414</td>
+            <td>1857</td>
+            <td>480</td>
+            <td>59.36</td>
+            <td>40</td>
+            <td>Mann 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0055644</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Campylobacter</td>
+            <td>a9fe8f15d7a42518a79084b9cee7bcaa</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=194'">194</a></td>
+            <td>192</td>
+            <td>genus</td>
+            <td>3933</td>
+            <td>1035</td>
+            <td>2850</td>
+            <td>48</td>
+            <td>26.32</td>
+            <td>0.25</td>
+            <td>Meric 2014</td>
+            <td>https://doi.org/10.1371/journal.pone.0092798</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudomonas aeruginosa</td>
+            <td>0dff0c6579a75b5bcba194820285e533</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287'">287</a></td>
+            <td>181</td>
+            <td>species</td>
+            <td>16820</td>
+            <td>2503</td>
+            <td>9108</td>
+            <td>5209</td>
+            <td>14.88</td>
+            <td>28.78</td>
+            <td>Mosquera-Rendon 2016</td>
+            <td>https://doi.org/10.1186/s12864-016-2364-4</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Chlamydiales</td>
+            <td>42edf68ce0bce1b3aaea3674658144aa</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=51291'">51291</a></td>
+            <td>37</td>
+            <td>order</td>
+            <td>5554</td>
+            <td>492</td>
+            <td>1553</td>
+            <td>3509</td>
+            <td>8.86</td>
+            <td>94.84</td>
+            <td>Psomopoulos 2012</td>
+            <td>https://doi.org/10.3390/genes3020291</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Escherichia coli</td>
+            <td>ccfcf353d862ce1e1172b5e7cc689e55</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562'">562</a></td>
+            <td>17</td>
+            <td>species</td>
+            <td>5837</td>
+            <td>2344</td>
+            <td>508</td>
+            <td>2985</td>
+            <td>40.16</td>
+            <td>175.59</td>
+            <td>Rasko 2008</td>
+            <td>https://doi.org/10.1128/JB.00619-08</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Emiliania</td>
+            <td>34330a69baf0a83b197efec8d18c4b8c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2902'">2902</a></td>
+            <td>14</td>
+            <td>genus</td>
+            <td>28422</td>
+            <td>4310</td>
+            <td>20647</td>
+            <td>3465</td>
+            <td>15.16</td>
+            <td>247.5</td>
+            <td>Read 2013</td>
+            <td>https://doi.org/10.1038/nature12221</td>
+            <td>?</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sulfolobus islandicus</td>
+            <td>95de34e15fcbfd50ce05d9ea9b766a05</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43080'">43080</a></td>
+            <td>7</td>
+            <td>species</td>
+            <td>4224</td>
+            <td>2169</td>
+            <td>1060</td>
+            <td>995</td>
+            <td>51.35</td>
+            <td>142.14</td>
+            <td>Reno 2009</td>
+            <td>https://doi.org/10.1073/pnas.0808945106</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>autotrophic acetogenic B</td>
+            <td>3aa6ca26b4353d528a6bd8f1c878ee21</td>
+            <td></td>
+            <td>14</td>
+            <td>group</td>
+            <td>15080</td>
+            <td>474</td>
+            <td>4710</td>
+            <td>9896</td>
+            <td>3.14</td>
+            <td>706.86</td>
+            <td>Shin 2016</td>
+            <td> https://doi.org/10.3389/fmicb.2016.01531</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus paracasei</td>
+            <td>6828a324cf25efbecc88127cb2eb3554</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1597'">1597</a></td>
+            <td>37</td>
+            <td>species</td>
+            <td>4200</td>
+            <td>1800</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>42.86</td>
+            <td>-11</td>
+            <td>Smokvina 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0068731</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Corynebacterium pseudotuberculosis</td>
+            <td>332d71cb1e042bae01232d5469ce09ed</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1719'">1719</a></td>
+            <td>15</td>
+            <td>species</td>
+            <td>2782</td>
+            <td>1504</td>
+            <td>1041</td>
+            <td>237</td>
+            <td>54.06</td>
+            <td>15.8</td>
+            <td>Soares 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0053818</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Burkholderia pseudomallei</td>
+            <td>e165c3a31576bf2e74d636d0a822c288</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28450'">28450</a></td>
+            <td>37</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>4687</td>
+            <td>-11</td>
+            <td>5658</td>
+            <td>-11</td>
+            <td>152.92</td>
+            <td>Spring-Pearson 2015</td>
+            <td>https://doi.org/10.1371/journal.pone.0140274</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus agalactiae</td>
+            <td>b7363e0817499fbfc40b85fd323a95e6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1311'">1311</a></td>
+            <td>8</td>
+            <td>species</td>
+            <td>2571</td>
+            <td>1486</td>
+            <td>727</td>
+            <td>358</td>
+            <td>57.8</td>
+            <td>44.75</td>
+            <td>Tettelin 2005</td>
+            <td>https://doi.org/10.1073/pnas.0506758102</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>photosynthetic prokaryotes</td>
+            <td>401b850436692a29adb73594829fc5dd</td>
+            <td></td>
+            <td>82</td>
+            <td>group</td>
+            <td>23362</td>
+            <td>268</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>1.15</td>
+            <td>-11</td>
+            <td>Touchman 2012</td>
+            <td></td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Helicobacter pylori</td>
+            <td>443f63dd342a0a780cd26b20c754ef49</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=210'">210</a></td>
+            <td>30</td>
+            <td>species</td>
+            <td>2239</td>
+            <td>1248</td>
+            <td>714</td>
+            <td>277</td>
+            <td>55.74</td>
+            <td>9.23</td>
+            <td>Uchiyama 2016</td>
+            <td>https://doi.org/10.1371/journal.pone.0159419</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium</td>
+            <td>301fdcb3d4ce22ac5ed7c4c0f4306ef6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1485'">1485</a></td>
+            <td>16</td>
+            <td>genus</td>
+            <td>19941</td>
+            <td>546</td>
+            <td>7450</td>
+            <td>11945</td>
+            <td>2.74</td>
+            <td>746.56</td>
+            <td>Udaondo 2017</td>
+            <td> https://doi.org/10.1111/1462-2920.13732</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudomonas putida</td>
+            <td>746f29c169894657d1feb3ea9c7941cb</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=303'">303</a></td>
+            <td>14</td>
+            <td>species</td>
+            <td>10197</td>
+            <td>3326</td>
+            <td>2752</td>
+            <td>4119</td>
+            <td>32.62</td>
+            <td>294.21</td>
+            <td>Udaondo 2016</td>
+            <td> https://doi.org/10.1111/1462-2920.13015</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Burkholderia</td>
+            <td>6289a1be2cab31333d04758fd7a4f478</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=32008'">32008</a></td>
+            <td>56</td>
+            <td>genus</td>
+            <td>40000</td>
+            <td>3500</td>
+            <td>31300</td>
+            <td>5200</td>
+            <td>8.75</td>
+            <td>92.86</td>
+            <td>Ussery 2009</td>
+            <td>https://doi.org/10.1159/000235768</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Stenotrophomonas</td>
+            <td>d8115276a13aeb882c2931102c205ac5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=40323'">40323</a></td>
+            <td>119</td>
+            <td>genus</td>
+            <td>-11</td>
+            <td>239</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Vinuesa 2018</td>
+            <td>https://doi.org/10.3389/fmicb.2018.00771</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus reuteri</td>
+            <td>b81ffd749e3becbd2b2ca2a98d569a03</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1598'">1598</a></td>
+            <td>19</td>
+            <td>species</td>
+            <td>5225</td>
+            <td>851</td>
+            <td>2484</td>
+            <td>1890</td>
+            <td>16.29</td>
+            <td>99.47</td>
+            <td>Wegmann 2015</td>
+            <td>https://doi.org/10.1186/s12864-015-2216-7</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus reuteri</td>
+            <td>ed9a0516f6da17839962987d8d6c2c1b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1598'">1598</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>3373</td>
+            <td>1364</td>
+            <td>357</td>
+            <td>1652</td>
+            <td>40.44</td>
+            <td>275.33</td>
+            <td>Wegmann 2015</td>
+            <td>https://doi.org/10.1186/s12864-015-2216-7</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Epsilonproteobacteria</td>
+            <td>9fc05df003906b9b378830b939cfad0e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29547'">29547</a></td>
+            <td>39</td>
+            <td>class</td>
+            <td>16349</td>
+            <td>289</td>
+            <td>5116</td>
+            <td>10944</td>
+            <td>1.77</td>
+            <td>280.62</td>
+            <td>Zhang 2014</td>
+            <td>https://doi.org/10.3389/fmicb.2014.00110</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus pyogenes</td>
+            <td>65208b010669ad2a74a8452d90c9864a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1314'">1314</a></td>
+            <td>22</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>1224</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Le Breton 2015</td>
+            <td>https://link.springer.com/content/pdf/10.1038/srep09838.pdf</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptomyces</td>
+            <td>7b27b6296d2ea120e6e033371cc2023d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1883'">1883</a></td>
+            <td>17</td>
+            <td>genus</td>
+            <td>34592</td>
+            <td>2018</td>
+            <td>11743</td>
+            <td>20831</td>
+            <td>5.83</td>
+            <td>1225.35</td>
+            <td>Kim 2015</td>
+            <td>https://doi.org/10.4014/jmb.1504.04008</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter baumannii</td>
+            <td>057acb77316c8f3475d18eb54634922a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470'">470</a></td>
+            <td>30</td>
+            <td>species</td>
+            <td>7606</td>
+            <td>2445</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>32.15</td>
+            <td>-11</td>
+            <td>Hassan 2016</td>
+            <td>https://doi.org/10.1186/s12864-016-2951-4</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Listeria</td>
+            <td>6b2d6cd8eb18f0b3804252e72df44a47</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1637'">1637</a></td>
+            <td>13</td>
+            <td>genus</td>
+            <td>4950</td>
+            <td>2032</td>
+            <td>1897</td>
+            <td>1021</td>
+            <td>41.05</td>
+            <td>78.54</td>
+            <td>Den Bakker 2010</td>
+            <td>https://doi.org/10.1186/1471-2164-11-688</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Cronobacter</td>
+            <td>037a48bbd5272e0c4ce27ca17ee5cc10</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=413496'">413496</a></td>
+            <td>8</td>
+            <td>genus</td>
+            <td>-11</td>
+            <td>3160</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Grim 2013</td>
+            <td>https://doi.org/10.1186/1471-2164-14-366</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus</td>
+            <td>9396a78c040e9d17e803d3871674b99f</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1301'">1301</a></td>
+            <td>15</td>
+            <td>genus</td>
+            <td>5442</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Croucher 2017</td>
+            <td>https://doi.org/10.1073/pnas.1613937114</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudomonas syringae</td>
+            <td>9c40fd8b6e6082f5a52c873b46fa7f75</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=317'">317</a></td>
+            <td>19</td>
+            <td>species</td>
+            <td>12749</td>
+            <td>3397</td>
+            <td>3380</td>
+            <td>5972</td>
+            <td>26.65</td>
+            <td>314.32</td>
+            <td>Baltrus 2011</td>
+            <td>https://doi.org/10.1371/journal.ppat.1002132</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>E. coli (metabolism)</td>
+            <td>d6122f6ae917dac939fcb66eba9c1ed9</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562'">562</a></td>
+            <td>16</td>
+            <td>group</td>
+            <td>16417</td>
+            <td>2894</td>
+            <td>4146</td>
+            <td>9377</td>
+            <td>17.63</td>
+            <td>586.06</td>
+            <td>Baumler 2011</td>
+            <td>https://doi.org/10.1186/1752-0509-5-182</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Staphylococcus aureus</td>
+            <td>11e796f16523348901f1c1354ea49ac9</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280'">1280</a></td>
+            <td>17</td>
+            <td>species</td>
+            <td>3155</td>
+            <td>2266</td>
+            <td>755</td>
+            <td>134</td>
+            <td>71.82</td>
+            <td>7.88</td>
+            <td>Boissy 2011</td>
+            <td>https://doi.org/10.1186/1471-2164-12-187</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Oenococcus oeni</td>
+            <td>c2720accfc15f928a8a18bce49ae3dc7</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1247'">1247</a></td>
+            <td>14</td>
+            <td>species</td>
+            <td>2846</td>
+            <td>1165</td>
+            <td>739</td>
+            <td>942</td>
+            <td>40.93</td>
+            <td>67.29</td>
+            <td>Borneman 2012</td>
+            <td>https://doi.org/10.1186/1471-2164-13-373</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus subtilis</td>
+            <td>5e9a318d0226bb27d262bf68ce6c46e4</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423'">1423</a></td>
+            <td>36</td>
+            <td>species</td>
+            <td>6250</td>
+            <td>2500</td>
+            <td>2750</td>
+            <td>1000</td>
+            <td>40</td>
+            <td>27.78</td>
+            <td>Borriss 2018</td>
+            <td> https://doi.org/10.1111/1751-7915.13043</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Staphylococcus aureus</td>
+            <td>4483bb7725e506b0c9508230d5ffe0d1</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280'">1280</a></td>
+            <td>64</td>
+            <td>species</td>
+            <td>7457</td>
+            <td>1441</td>
+            <td>2871</td>
+            <td>3145</td>
+            <td>19.32</td>
+            <td>49.14</td>
+            <td>Bosi 2016</td>
+            <td>https://doi.org/10.1073/pnas.1523199113</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Lysobacter</td>
+            <td>b715a4f98d92c66441666ce696e579b5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=68'">68</a></td>
+            <td>6</td>
+            <td>genus</td>
+            <td>10028</td>
+            <td>2891</td>
+            <td>3121</td>
+            <td>4016</td>
+            <td>28.83</td>
+            <td>669.33</td>
+            <td>De Bruijn 2015</td>
+            <td>https://doi.org/10.1186/s12864-015-2191-z</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pantoea ananatis</td>
+            <td>c230f8da6b69f7bbc33cb8c6caf41fed</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=553'">553</a></td>
+            <td>8</td>
+            <td>species</td>
+            <td>5566</td>
+            <td>3876</td>
+            <td>826</td>
+            <td>864</td>
+            <td>69.64</td>
+            <td>108</td>
+            <td>de Maayer 2014</td>
+            <td>https://doi.org/10.1186/1471-2164-15-404</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Listeria monocytogenes</td>
+            <td>b40cbe2863e5a40c53f954490edf9f97</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1639'">1639</a></td>
+            <td>26</td>
+            <td>species</td>
+            <td>4052</td>
+            <td>2393</td>
+            <td>1351</td>
+            <td>308</td>
+            <td>59.06</td>
+            <td>11.85</td>
+            <td>Deng 2010</td>
+            <td>https://doi.org/10.1186/1471-2164-11-500</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Thaumarchaeota</td>
+            <td>e59d76191981b4b426ce15242c44378c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=651137'">651137</a></td>
+            <td>14</td>
+            <td>phylum</td>
+            <td>2514</td>
+            <td>1335</td>
+            <td>763</td>
+            <td>416</td>
+            <td>53.1</td>
+            <td>29.71</td>
+            <td>Deschamps 2014</td>
+            <td>https://doi.org/10.1093/gbe/evu127</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Euryarchaeota GII/III</td>
+            <td>4ed2d771223b6a2f52248954cd4d59cc</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28890'">28890</a></td>
+            <td>9</td>
+            <td>phylum</td>
+            <td>4820</td>
+            <td>1256</td>
+            <td>2271</td>
+            <td>1293</td>
+            <td>26.06</td>
+            <td>143.67</td>
+            <td>Deschamps 2014</td>
+            <td>https://doi.org/10.1093/gbe/evu127</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus pneumoniae</td>
+            <td>8f0a068f6973cdd520296e564be50311</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1313'">1313</a></td>
+            <td>44</td>
+            <td>species</td>
+            <td>3221</td>
+            <td>1666</td>
+            <td>1166</td>
+            <td>389</td>
+            <td>51.72</td>
+            <td>8.84</td>
+            <td>Donati 2010</td>
+            <td>https://doi.org/10.1186/gb-2010-11-10-r107</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>S. pneumoniae/S.mitis/S.oralis/S.infantis</td>
+            <td>6c8bfe8da9ed7bac9f78bdf72953e7e9</td>
+            <td></td>
+            <td>50</td>
+            <td>group</td>
+            <td>4904</td>
+            <td>1111</td>
+            <td>2228</td>
+            <td>1565</td>
+            <td>22.65</td>
+            <td>31.3</td>
+            <td>Donati 2010</td>
+            <td>https://doi.org/10.1186/gb-2010-11-10-r107</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>S.pneumoniae/S.mitis/S.oralis/S.infantis/S.Sanguinis/S.pyogenes</td>
+            <td>76a5f9a03f80236a8ae88bb08485c89d</td>
+            <td></td>
+            <td>52</td>
+            <td>group</td>
+            <td>7031</td>
+            <td>522</td>
+            <td>2957</td>
+            <td>3552</td>
+            <td>7.42</td>
+            <td>68.31</td>
+            <td>Donati 2010</td>
+            <td>https://doi.org/10.1186/gb-2010-11-10-r107</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Alphaproteobacteria SAR11 marine/freshwater</td>
+            <td>2886e0a02118cda6842c05b1fd86c253</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28211'">28211</a></td>
+            <td>28</td>
+            <td>group</td>
+            <td>3589</td>
+            <td>500</td>
+            <td>599</td>
+            <td>2490</td>
+            <td>13.93</td>
+            <td>88.93</td>
+            <td>Eiler 2016</td>
+            <td>https://doi.org/10.1038/ismej.2015.260</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Aeromonas hydrophila / Aeromonas veronii / Aeromonas caviae</td>
+            <td>fb9c047a9ed1cb853fc3a08421fa42d9</td>
+            <td></td>
+            <td>33</td>
+            <td>group</td>
+            <td>14150</td>
+            <td>2679</td>
+            <td>7005</td>
+            <td>4466</td>
+            <td>18.93</td>
+            <td>135.33</td>
+            <td>Ghatak 2016</td>
+            <td>https://doi.org/10.1007/s10482-016-0693-6</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Aeromonas hydrophila</td>
+            <td>bffc5314547d92cac77650b82d4e3dc0</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=644'">644</a></td>
+            <td>16</td>
+            <td>species</td>
+            <td>9181</td>
+            <td>3508</td>
+            <td>3673</td>
+            <td>2000</td>
+            <td>38.21</td>
+            <td>125</td>
+            <td>Ghatak 2016</td>
+            <td>https://doi.org/10.1007/s10482-016-0693-6</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Aeromonas veronii</td>
+            <td>7be9a9132f62ac1f102d6d425cea1c1e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=654'">654</a></td>
+            <td>11</td>
+            <td>species</td>
+            <td>7214</td>
+            <td>3344</td>
+            <td>2484</td>
+            <td>1386</td>
+            <td>46.35</td>
+            <td>126</td>
+            <td>Ghatak 2016</td>
+            <td>https://doi.org/10.1007/s10482-016-0693-6</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Aeromonas caviae</td>
+            <td>11d09c5b38ba66d6ffd50657ffcd23f4</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=648'">648</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>6884</td>
+            <td>3380</td>
+            <td>2424</td>
+            <td>1080</td>
+            <td>49.1</td>
+            <td>180</td>
+            <td>Ghatak 2016</td>
+            <td>https://doi.org/10.1007/s10482-016-0693-6</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Helicobacter pylori/Helicobacter acinonychis</td>
+            <td>20acfb01ba8da501c2210144f77f5d0d</td>
+            <td></td>
+            <td>60</td>
+            <td>group</td>
+            <td>1649</td>
+            <td>1150</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>69.74</td>
+            <td>-11</td>
+            <td>Gressmann 2005</td>
+            <td>https://doi.org/10.1371/journal.pgen.0010043</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pelagibacteriaceae</td>
+            <td>cf1312738261664662c36737436fb97c</td>
+            <td></td>
+            <td>7</td>
+            <td>genus</td>
+            <td>2558</td>
+            <td>705</td>
+            <td>856</td>
+            <td>997</td>
+            <td>27.56</td>
+            <td>142.43</td>
+            <td>Grote 2012</td>
+            <td></td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Haemophilus influenzae (NTHi)</td>
+            <td>aced583a60375fdeb9c1e06ea450a48a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=727'">727</a></td>
+            <td>13</td>
+            <td>population</td>
+            <td>2786</td>
+            <td>1461</td>
+            <td>786</td>
+            <td>539</td>
+            <td>52.44</td>
+            <td>41.46</td>
+            <td>Hogg 2007</td>
+            <td>https://doi.org/10.1186/gb-2007-8-6-r103</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Escherichia coli</td>
+            <td>5f0de70b2afe7003796c3ecd6826c983</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562'">562</a></td>
+            <td>186</td>
+            <td>species</td>
+            <td>16373</td>
+            <td>3051</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>18.63</td>
+            <td>-11</td>
+            <td>Kaas 2012</td>
+            <td>https://doi.org/10.1186/1471-2164-13-577</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Vibrionaceae</td>
+            <td>e61a19b44731fa325d57701387d8abc5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=641'">641</a></td>
+            <td>64</td>
+            <td>genus</td>
+            <td></td>
+            <td></td>
+            <td>12914</td>
+            <td></td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Kahlke 2012</td>
+            <td>https://doi.org/10.1186/1471-2164-13-179</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus rhamnosus</td>
+            <td>b6419455324f3e6a147f26deb5bbef79</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=47715'">47715</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>4893</td>
+            <td>2095</td>
+            <td>1943</td>
+            <td>855</td>
+            <td>42.82</td>
+            <td>65.77</td>
+            <td>Kant 2014</td>
+            <td>https://doi.org/10.1371/journal.pone.0102762</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Prochlorococcus</td>
+            <td>c9292defe6c3ced37efbce2946679a97</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1218'">1218</a></td>
+            <td>12</td>
+            <td>genus</td>
+            <td>5736</td>
+            <td>1250</td>
+            <td>2061</td>
+            <td>2425</td>
+            <td>21.79</td>
+            <td>202.08</td>
+            <td>Kettler 2007</td>
+            <td>https://doi.org/10.1371/journal.pgen.0030231</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Siphoviridae phage</td>
+            <td>030706b5d4c8fe309e03a7f9cd0bb0a6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10699'">10699</a></td>
+            <td>127</td>
+            <td>species</td>
+            <td>203</td>
+            <td>24</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>11.82</td>
+            <td>-11</td>
+            <td>Kupczok 2018</td>
+            <td>https://doi.org/10.1093/molbev/msy027</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Rhizobiaceae</td>
+            <td>a767b4922cfd03d72ca787314316326b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=82115'">82115</a></td>
+            <td>47</td>
+            <td>family</td>
+            <td>42239</td>
+            <td>455</td>
+            <td>14237</td>
+            <td>27547</td>
+            <td>1.08</td>
+            <td>586.11</td>
+            <td>Lassalle 2017</td>
+            <td>https://doi.org/10.1093/gbe/evx255</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus</td>
+            <td>a8981ff33dce8d20365221559df2d26e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1301'">1301</a></td>
+            <td>26</td>
+            <td>genus</td>
+            <td>5354</td>
+            <td>611</td>
+            <td>3743</td>
+            <td>1000</td>
+            <td>11.41</td>
+            <td>38.46</td>
+            <td>Lefebure 2007</td>
+            <td>https://doi.org/10.1186/gb-2007-8-5-r71</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Escherichia coli</td>
+            <td>2447e634ec590e1a7b3fba8d2afdb963</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562'">562</a></td>
+            <td>53</td>
+            <td>species</td>
+            <td>13296</td>
+            <td>1472</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>11.07</td>
+            <td>-11</td>
+            <td>Lukjancenko 2010</td>
+            <td>https://doi.org/10.1007/s00248-010-9717-3</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>E.coli/Shigella</td>
+            <td>d902411ac6e1a62a3d9893ea4ca8966c</td>
+            <td></td>
+            <td>61</td>
+            <td>group</td>
+            <td>15741</td>
+            <td>993</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>6.31</td>
+            <td>-11</td>
+            <td>Lukjancenko 2010</td>
+            <td>https://doi.org/10.1007/s00248-010-9717-3</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Escherichia coli ST131</td>
+            <td>43177d19de1bc635def37e20822b6263</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=941322'">941322</a></td>
+            <td>228</td>
+            <td>strain</td>
+            <td>11401</td>
+            <td>2722</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>23.88</td>
+            <td>-11</td>
+            <td>McNally 2016</td>
+            <td>https://doi.org/10.1371/journal.pgen.1006280</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Borrelia burgdorferi sensu lato</td>
+            <td>be91c3293bd1f418a9019bd6bf971f76</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=139'">139</a></td>
+            <td>21</td>
+            <td>species+</td>
+            <td>1859</td>
+            <td>1200</td>
+            <td>507</td>
+            <td>152</td>
+            <td>64.55</td>
+            <td>7.24</td>
+            <td>Mongodin 2013</td>
+            <td>https://doi.org/10.1186/1471-2164-14-693</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Borrelia burgdorferi sensu stricto</td>
+            <td>463cc998426194c6f3172f5d5f5e1c54</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=139'">139</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>1500</td>
+            <td>1250</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>83.33</td>
+            <td>-11</td>
+            <td>Mongodin 2013</td>
+            <td>https://doi.org/10.1186/1471-2164-14-693</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>cyanobacterial strains</td>
+            <td>2ae9274c4f4d0285ed2c48b42547ef09</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1117'">1117</a></td>
+            <td>15</td>
+            <td>phylum</td>
+            <td>3188</td>
+            <td>892</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>27.98</td>
+            <td>-11</td>
+            <td>Mulkidjanian 2006</td>
+            <td>https://doi.org/10.1073/pnas.0605709103</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudomonas aeruginosa</td>
+            <td>8628687bea4edf667d2b48ae5a4b1c36</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287'">287</a></td>
+            <td>12</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>5316</td>
+            <td>608</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>Ozer 2014</td>
+            <td>https://doi.org/10.1186/1471-2164-15-737</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Ralstonia solanacearum</td>
+            <td>c969a2d3ca9a975f695ccaeea07f2197</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=305'">305</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>9093</td>
+            <td>2543</td>
+            <td>3538</td>
+            <td>3012</td>
+            <td>27.97</td>
+            <td>502</td>
+            <td>Remenant 2010</td>
+            <td>https://doi.org/10.1186/1471-2164-11-379</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Yersinia enterocolitica</td>
+            <td>5215f18e4cb37375922799c4e41ea64e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=630'">630</a></td>
+            <td>117</td>
+            <td>species</td>
+            <td>11460</td>
+            <td>3181</td>
+            <td>5715</td>
+            <td>2564</td>
+            <td>27.76</td>
+            <td>21.91</td>
+            <td>Reuter 2015</td>
+            <td>10.1099/mgen.0.000030</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Streptococcus</td>
+            <td>8082f6087ba3f8cf6a2662541cd06540</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1301'">1301</a></td>
+            <td>46</td>
+            <td>genus</td>
+            <td>19000</td>
+            <td>159</td>
+            <td>5916</td>
+            <td>12925</td>
+            <td>0.84</td>
+            <td>280.98</td>
+            <td>Richards 2014</td>
+            <td>https://doi.org/10.1093/gbe/evu048</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter baumannii</td>
+            <td>e1f9d4cb8dce5a91a5bb4b72d754468b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470'">470</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>6500</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>396</td>
+            <td>-11</td>
+            <td>66</td>
+            <td>Sahl 2011</td>
+            <td>https://doi.org/10.1186/1471-2164-12-291</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Burkholderia pseudomallei</td>
+            <td>16d3ca7c33fbc8eaad4ff49ce80c64be</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28450'">28450</a></td>
+            <td>94</td>
+            <td>species</td>
+            <td>5369</td>
+            <td>4619</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>86.03</td>
+            <td>-11</td>
+            <td>Sim 2008</td>
+            <td>https://doi.org/10.1371/journal.ppat.1000178</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Cyanobacteria</td>
+            <td>f89f09f86a3f2c840bd5ffc309b7a954</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1117'">1117</a></td>
+            <td>58</td>
+            <td>phylum</td>
+            <td>44831</td>
+            <td>559</td>
+            <td>15752</td>
+            <td>28520</td>
+            <td>1.25</td>
+            <td>491.72</td>
+            <td>Simm 2015</td>
+            <td>https://doi.org/10.3389/fmicb.2015.00219</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Saccharomyces cerevisiae</td>
+            <td>25f14327768660f0709effe254552c97</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4932'">4932</a></td>
+            <td>18</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>64</td>
+            <td>16</td>
+            <td>-11</td>
+            <td>0.89</td>
+            <td>Song 2015</td>
+            <td>https://doi.org/10.1371/journal.pone.0120671</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Nannochloropsis (chloroplast)</td>
+            <td>a7f61b6943b5d0a00c8a355825c35b19</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5748'">5748</a></td>
+            <td>4</td>
+            <td>genus</td>
+            <td>138</td>
+            <td>131</td>
+            <td>7</td>
+            <td>0</td>
+            <td>94.93</td>
+            <td>0</td>
+            <td>Starkenburg 2014</td>
+            <td>https://doi.org/10.1186/1471-2164-15-212</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Corynebacterium diphtheriae</td>
+            <td>b27946aca9b1e546663434c364008532</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1717'">1717</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>4786</td>
+            <td>1632</td>
+            <td>2361</td>
+            <td>793</td>
+            <td>34.1</td>
+            <td>61</td>
+            <td>Trost 2012</td>
+            <td>https://doi.org/10.1128/JB.00183-12</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Brucella</td>
+            <td>13df581e2e76b1035c977fa5f34e0f43</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=234'">234</a></td>
+            <td>42</td>
+            <td>genus</td>
+            <td>5369</td>
+            <td>1710</td>
+            <td>2477</td>
+            <td>1182</td>
+            <td>31.85</td>
+            <td>28.14</td>
+            <td>Yang 2016</td>
+            <td>https://doi.org/10.1007/s00438-015-1154-z</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus brevis</td>
+            <td>579822657be48f4ba13cab05df4314fe</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1580'">1580</a></td>
+            <td>19</td>
+            <td>species</td>
+            <td>3968</td>
+            <td>1428</td>
+            <td>2294</td>
+            <td>246</td>
+            <td>35.99</td>
+            <td>12.95</td>
+            <td>Feyereisen 2019</td>
+            <td>https://doi.org/10.1186/s12864-019-5783-1</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Orientia tsutsugamushi</td>
+            <td>b8b088b152113fdfecae70f729d13ca6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=784'">784</a></td>
+            <td>40</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>687</td>
+            <td>-11</td>
+            <td>79</td>
+            <td>-11</td>
+            <td>1.98</td>
+            <td>Fleshman 2018</td>
+            <td>https://doi.org/10.1099/mgen.0.000199</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudomonas aeruginosa</td>
+            <td>ab9aee25be986a292b175310feb7bbee</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=287'">287</a></td>
+            <td>1311</td>
+            <td>species</td>
+            <td>54272</td>
+            <td>665</td>
+            <td>26420</td>
+            <td>27187</td>
+            <td>1.23</td>
+            <td>20.74</td>
+            <td>Freschi 2019</td>
+            <td>https://doi.org/10.1093/gbe/evy259</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Helianthus annuus (cultivated)</td>
+            <td>445c4a409f4075cad30319a5ed898964</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4232'">4232</a></td>
+            <td>287</td>
+            <td>population</td>
+            <td>45302</td>
+            <td>32917</td>
+            <td>9921</td>
+            <td>2464</td>
+            <td>72.66</td>
+            <td>8.59</td>
+            <td>Hübner 2018</td>
+            <td>https://doi.org/10.1038/s41477-018-0329-0</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Saccharomyces cerevisiae</td>
+            <td>18acaf5841cb95477beeb9f1e3042749</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4932'">4932</a></td>
+            <td>1011</td>
+            <td>species</td>
+            <td>7796</td>
+            <td>4940</td>
+            <td>2593</td>
+            <td>263</td>
+            <td>63.37</td>
+            <td>0.26</td>
+            <td>Peter 2018</td>
+            <td>https://doi.org/10.1038/s41586-018-0030-5</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Cylindrospermopsis raciborskii</td>
+            <td>0e005bb24c59d1f4726d70e833615d0b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=77022'">77022</a></td>
+            <td>8</td>
+            <td>species</td>
+            <td>4716</td>
+            <td>2031</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>43.07</td>
+            <td>-11</td>
+            <td>Abreu 2018</td>
+            <td>https://doi.org/10.3389/fmicb.2018.00306</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Citrobacter koseri</td>
+            <td>297d39d53be0c214e8c08262dc5deef5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=545'">545</a></td>
+            <td>7</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>2812</td>
+            <td>-11</td>
+            <td>3329</td>
+            <td>-11</td>
+            <td>475.57</td>
+            <td>Armougom 2016</td>
+            <td>https://doi.org/10.3389/fmicb.2016.00340</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mesoplasma florum</td>
+            <td>fe6c1dd5bf436940bceccf4758a65261</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2151'">2151</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>1150</td>
+            <td>546</td>
+            <td>299</td>
+            <td>305</td>
+            <td>47.48</td>
+            <td>23.46</td>
+            <td>Baby 2018</td>
+            <td>https://doi.org/10.1128/mSystems.00198-17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Burkholderia</td>
+            <td>c10e8b47b725d611770fc2659833fa56</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=32008'">32008</a></td>
+            <td>127</td>
+            <td>genus</td>
+            <td>48000</td>
+            <td>1024</td>
+            <td>25236</td>
+            <td>21740</td>
+            <td>2.13</td>
+            <td>171.18</td>
+            <td>Bochkareva 2018</td>
+            <td>https://doi.org/10.1186/s12864-018-5245-1</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Pasteurella multocida</td>
+            <td>e5e6a458a4dfec260da2f47f3804f63d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=747'">747</a></td>
+            <td>33</td>
+            <td>species</td>
+            <td>4036</td>
+            <td>1602</td>
+            <td>1364</td>
+            <td>1070</td>
+            <td>39.69</td>
+            <td>32.42</td>
+            <td>Cao 2017</td>
+            <td>https://doi.org/10.3389/fmicb.2017.00961</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Klebsiella pneumoniae</td>
+            <td>44bc8e40643d06193d23cc0498328cb8</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=573'">573</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>6359</td>
+            <td>4829</td>
+            <td>1201</td>
+            <td>329</td>
+            <td>75.94</td>
+            <td>54.83</td>
+            <td>Caputo 2015</td>
+            <td>https://doi.org/10.1186/s13062-015-0085-2</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Enterobacter hormaechei</td>
+            <td>40c52fbff37a1c41228271ba906b537c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=158836'">158836</a></td>
+            <td>219</td>
+            <td>species</td>
+            <td>18223</td>
+            <td>3048</td>
+            <td>7381</td>
+            <td>7794</td>
+            <td>16.73</td>
+            <td>35.59</td>
+            <td>Chavda 2016</td>
+            <td>10.1128/mBio.02093-16</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Salmonella enterica</td>
+            <td>31e404deb02e20b7a58d6b889b3e0c3f</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28901'">28901</a></td>
+            <td>73</td>
+            <td>species</td>
+            <td>21973</td>
+            <td>2328</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>10.59</td>
+            <td>-11</td>
+            <td>Criscuolo 2019</td>
+            <td>https://doi.org/10.1099/mgen.0.000284</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pasteurella multocida</td>
+            <td>0054145a8e9d37cb1319eff6b917638c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=747'">747</a></td>
+            <td>23</td>
+            <td>species</td>
+            <td>3585</td>
+            <td>1688</td>
+            <td>1200</td>
+            <td>697</td>
+            <td>47.09</td>
+            <td>30.3</td>
+            <td>Hurtado 2018</td>
+            <td>https://doi.org/10.1016/j.gene.2018.05.084</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Lactobacillus</td>
+            <td>26a58795a767251de4d51ce240569cea</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1578'">1578</a></td>
+            <td>332</td>
+            <td>genus</td>
+            <td>20800</td>
+            <td>266</td>
+            <td>7577</td>
+            <td>12957</td>
+            <td>1.28</td>
+            <td>39.03</td>
+            <td>Inglin 2018</td>
+            <td>https://doi.org/10.1186/s12864-018-4601-5</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Gallibacterium anatis</td>
+            <td>b9cb2389f6ec5cdc2c630215cf59c3d7</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=750'">750</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>3460</td>
+            <td>1724</td>
+            <td>492</td>
+            <td>1244</td>
+            <td>49.83</td>
+            <td>414.67</td>
+            <td>Johnson 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0054844</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mannheimia haemolytica</td>
+            <td>11dc28f3160b3e46f4464f47f401adf6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=75985'">75985</a></td>
+            <td>21</td>
+            <td>species</td>
+            <td>9507</td>
+            <td>1333</td>
+            <td>1813</td>
+            <td>6361</td>
+            <td>14.02</td>
+            <td>302.9</td>
+            <td>Klima 2015</td>
+            <td>https://doi.org/10.1371/journal.pone.0149520</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mycoplasma</td>
+            <td>937ecb96a90315b4e9d4926f81664b86</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2093'">2093</a></td>
+            <td>20</td>
+            <td>genus</td>
+            <td>3355</td>
+            <td>196</td>
+            <td>1678</td>
+            <td>1481</td>
+            <td>5.84</td>
+            <td>74.05</td>
+            <td>Liu 2012</td>
+            <td>https://doi.org/10.1371/journal.pone.0035698</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Enterobacter cloacae</td>
+            <td>c22698f2c4bda2826597a8ab6e26f93a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=550'">550</a></td>
+            <td>4</td>
+            <td>species</td>
+            <td>6808</td>
+            <td>3540</td>
+            <td>1038</td>
+            <td>2230</td>
+            <td>52</td>
+            <td>557.5</td>
+            <td>Liu 2013</td>
+            <td>https://doi.org/10.1371/journal.pone.0074487</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Neisseria</td>
+            <td>ba94c01d32a057a61ee6b185c5857c83</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=482'">482</a></td>
+            <td>107</td>
+            <td>genus</td>
+            <td>8926</td>
+            <td>1111</td>
+            <td>4322</td>
+            <td>3493</td>
+            <td>12.45</td>
+            <td>32.64</td>
+            <td>Lu 2019</td>
+            <td>https://doi.org/10.1155/2019/6015730</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Neisseria meningitidis</td>
+            <td>39b05a3244da3a542f80e6006fb09d50</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=487'">487</a></td>
+            <td>85</td>
+            <td>species</td>
+            <td>4841</td>
+            <td>1519</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>31.38</td>
+            <td>-11</td>
+            <td>Lu 2019</td>
+            <td>https://doi.org/10.1155/2019/6015730</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Neisseria gonorrhoeae</td>
+            <td>444c10521c0552e02678280be1bf5215</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=485'">485</a></td>
+            <td>15</td>
+            <td>species</td>
+            <td>3153</td>
+            <td>1921</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>60.93</td>
+            <td>-11</td>
+            <td>Lu 2019</td>
+            <td>https://doi.org/10.1155/2019/6015730</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Serratia</td>
+            <td>a7cfc0f6b6d2c568ebe4875cf9854bd9</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=613'">613</a></td>
+            <td>5</td>
+            <td>genus</td>
+            <td>6762</td>
+            <td>607</td>
+            <td>3729</td>
+            <td>2426</td>
+            <td>8.98</td>
+            <td>485.2</td>
+            <td>Manzano Marin 2012</td>
+            <td>https://doi.org/10.1371/journal.pone.0047274</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Piscirickettsia salmonis</td>
+            <td>2a244c0cd859c200b75e947372ce1046</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1238'">1238</a></td>
+            <td>19</td>
+            <td>species</td>
+            <td>3463</td>
+            <td>1732</td>
+            <td>1145</td>
+            <td>586</td>
+            <td>50.01</td>
+            <td>30.84</td>
+            <td>Nourdin-Galindo 2017</td>
+            <td>https://doi.org/10.3389/fcimb.2017.00459</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Zymoseptoria tritici</td>
+            <td>d57940374ab66b8666c2386b0c511557</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1047171'">1047171</a></td>
+            <td>5</td>
+            <td>species</td>
+            <td>15749</td>
+            <td>9149</td>
+            <td>3377</td>
+            <td>3223</td>
+            <td>58.09</td>
+            <td>644.6</td>
+            <td>Plissonneau 2018</td>
+            <td>https://doi.org/10.1186/s12915-017-0457-4</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus anthracis</td>
+            <td>ddd6741688259e9c23e45faa10deab9e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1392'">1392</a></td>
+            <td>9</td>
+            <td>species</td>
+            <td>2985</td>
+            <td>2893</td>
+            <td>85</td>
+            <td>7</td>
+            <td>96.92</td>
+            <td>0.78</td>
+            <td>Rouli 2014</td>
+            <td>https://doi.org/10.1002/nmi2.62</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Homo sapiens (african)</td>
+            <td>0f67ea390766a090bb2734ecf18246f3</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606'">9606</a></td>
+            <td>910</td>
+            <td>population</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>315</td>
+            <td>-11</td>
+            <td>0.35</td>
+            <td>Sherman 2019</td>
+            <td>https://doi.org/10.1038/s41588-018-0273-y</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Staphylococcus epidermidis</td>
+            <td>269a5951d7e49381aaa5eec9db408a5c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1282'">1282</a></td>
+            <td>198</td>
+            <td>species</td>
+            <td>8034</td>
+            <td>435</td>
+            <td>4684</td>
+            <td>2915</td>
+            <td>5.41</td>
+            <td>14.72</td>
+            <td>Su 2019</td>
+            <td>https://doi.org/10.1101/604629</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sinorhizobium</td>
+            <td>7031a558b95c8e677f730498014b7e4d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28105'">28105</a></td>
+            <td>50</td>
+            <td>genus</td>
+            <td>34150</td>
+            <td>2751</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>8.06</td>
+            <td>-11</td>
+            <td>Sugawara 2013</td>
+            <td>https://doi.org/10.1186/gb-2013-14-2-r17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sinorhizobium meliloti</td>
+            <td>eff22f3c7da17507e45f14bb01af385c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=382'">382</a></td>
+            <td>33</td>
+            <td>species</td>
+            <td>21118</td>
+            <td>4680</td>
+            <td>8490</td>
+            <td>7948</td>
+            <td>22.16</td>
+            <td>240.85</td>
+            <td>Sugawara 2013</td>
+            <td>https://doi.org/10.1186/gb-2013-14-2-r17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Sinorhizobium medicae</td>
+            <td>cd62cde6031db7eee7ca51af41611f39</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=110321'">110321</a></td>
+            <td>13</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>5036</td>
+            <td>-11</td>
+            <td>3041</td>
+            <td>-11</td>
+            <td>233.92</td>
+            <td>Sugawara 2013</td>
+            <td>https://doi.org/10.1186/gb-2013-14-2-r17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sinorhizobium fredii</td>
+            <td>e78d352bc900e2fcdb1a7ee4f490465a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=380'">380</a></td>
+            <td>2</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>5979</td>
+            <td>-11</td>
+            <td>1781</td>
+            <td>-11</td>
+            <td>890.5</td>
+            <td>Sugawara 2013</td>
+            <td>https://doi.org/10.1186/gb-2013-14-2-r17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Actinobacillus pleuropneumoniae</td>
+            <td>f54b60968f98550c62058a99fd0df863</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=715'">715</a></td>
+            <td>12</td>
+            <td>species</td>
+            <td>3303</td>
+            <td>1709</td>
+            <td>822</td>
+            <td>772</td>
+            <td>51.74</td>
+            <td>64.33</td>
+            <td>Xu 2010</td>
+            <td>10.1128/JB.00535-10</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospirillum ferriphilum</td>
+            <td>41552b7bab68b2233f28664c5eee85fb</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=178606'">178606</a></td>
+            <td>5</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>1053</td>
+            <td>100</td>
+            <td>210.6</td>
+            <td>Zhang 2018</td>
+            <td>https://doi.org/10.3389/fmicb.2018.00577</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acidithiobacillus thiooxidans</td>
+            <td>7534101ec6e4cefbd2d9ec1d7ba3dde9</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=930'">930</a></td>
+            <td>9</td>
+            <td>species</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>1185</td>
+            <td>100</td>
+            <td>131.67</td>
+            <td>Zhang 2018</td>
+            <td>https://doi.org/10.3389/fmicb.2018.01255</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter</td>
+            <td>5a0ec9ae8cc03057e77c020c8ab87e0f</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=469'">469</a></td>
+            <td>135</td>
+            <td>genus</td>
+            <td>30080</td>
+            <td>945</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>3.14</td>
+            <td>-11</td>
+            <td>Safarian 2017</td>
+            <td>https://doi.org/10.1186/s12864-017-3925-x</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter radioresistens</td>
+            <td>05d14a2baf73e92474db6b7cc2db71a4</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=40216'">40216</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>3745</td>
+            <td>2437</td>
+            <td>261</td>
+            <td>1047</td>
+            <td>65.07</td>
+            <td>349</td>
+            <td>Safarian 2017</td>
+            <td>https://doi.org/10.1186/s12864-017-3925-x</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acinetobacter modestus</td>
+            <td>e4a048baca91343831a26bba230971ea</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1776740'">1776740</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>5264</td>
+            <td>2656</td>
+            <td>300</td>
+            <td>2308</td>
+            <td>50.46</td>
+            <td>769.33</td>
+            <td>Safarian 2017</td>
+            <td>https://doi.org/10.1186/s12864-017-3925-x</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Moraxella bovoculi</td>
+            <td>68dc19f2195186beed35646dfbd373cf</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=386891'">386891</a></td>
+            <td>7</td>
+            <td>species</td>
+            <td>2845</td>
+            <td>1391</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>48.89</td>
+            <td>-11</td>
+            <td>Dickey 2016</td>
+            <td>https://doi.org/10.1186/s13567-016-0316-2</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Xanthomonas axonopodis</td>
+            <td>e1e55422b0f756d8738a9b8564931c63</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=53413'">53413</a></td>
+            <td>23</td>
+            <td>species</td>
+            <td>5147</td>
+            <td>3912</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>76.01</td>
+            <td>-11</td>
+            <td>Zhang 2015</td>
+            <td>https://doi.org/10.1038/ismej.2015.15</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Xylella fastidiosa</td>
+            <td>00d499e405ead791451ad543c79c7d03</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2371'">2371</a></td>
+            <td>27</td>
+            <td>species</td>
+            <td>6869</td>
+            <td>1269</td>
+            <td>2932</td>
+            <td>2668</td>
+            <td>18.47</td>
+            <td>98.81</td>
+            <td>Giampetruzzi 2017</td>
+            <td>https://doi.org/10.1094/PHYTO-12-16-0420-R</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Coxiella burnetii</td>
+            <td>ace3d7084246ff8e85d181dd8968a601</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=777'">777</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>11866</td>
+            <td>11595</td>
+            <td>183</td>
+            <td>88</td>
+            <td>97.72</td>
+            <td>14.67</td>
+            <td>d&#39;Amato 2014</td>
+            <td>https://doi.org/10.1016/j.cimid.2014.08.003</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Comamonas testosteroni</td>
+            <td>2f52f6f303a2fc8859330e7f3cddfe53</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=285'">285</a></td>
+            <td>14</td>
+            <td>species</td>
+            <td>10165</td>
+            <td>3599</td>
+            <td>3171</td>
+            <td>3395</td>
+            <td>35.41</td>
+            <td>242.5</td>
+            <td>Liu 2015</td>
+            <td>https://doi.org/10.1186/s12864-015-1314-x</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bordetella</td>
+            <td>c6c032dbbee75ca4e1afbb319d621df8</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=517'">517</a></td>
+            <td>11</td>
+            <td>genus</td>
+            <td>5558</td>
+            <td>2857</td>
+            <td>2106</td>
+            <td>595</td>
+            <td>51.4</td>
+            <td>54.09</td>
+            <td>Park 2012</td>
+            <td>https://doi.org/10.1186/1471-2164-13-545</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Mesorhizobium</td>
+            <td>a3947d216841f4e6b1026507f66cc14a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=68287'">68287</a></td>
+            <td>53</td>
+            <td>genus</td>
+            <td>27802</td>
+            <td>2059</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>7.41</td>
+            <td>-11</td>
+            <td>Porter 2017</td>
+            <td>https://doi.org/10.1038/ismej.2016.88</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Rickettsia</td>
+            <td>97faa932adfe4e48d894fba10a75e69e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=780'">780</a></td>
+            <td>43</td>
+            <td>genus</td>
+            <td>4837</td>
+            <td>693</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>14.33</td>
+            <td>-11</td>
+            <td>Duan 2014</td>
+            <td>https://doi.org/10.1016/j.meegid.2014.05.028</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Rhodococcus equi</td>
+            <td>cb499cb3fb6e7576948de5bdd08ddece</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43767'">43767</a></td>
+            <td>29</td>
+            <td>species</td>
+            <td>8174</td>
+            <td>3858</td>
+            <td>1393</td>
+            <td>2923</td>
+            <td>47.2</td>
+            <td>100.79</td>
+            <td>Anastasi 2016</td>
+            <td>https://doi.org/10.1093/gbe/evw222</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Salinispora</td>
+            <td>c79362e0ab87bced21e267a8e6e9590a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=168694'">168694</a></td>
+            <td>119</td>
+            <td>genus</td>
+            <td>18492</td>
+            <td>2603</td>
+            <td>10909</td>
+            <td>4980</td>
+            <td>14.08</td>
+            <td>41.85</td>
+            <td>Millan-Aguinaga 2017</td>
+            <td>https://doi.org/10.1038/s41598-017-02845-3</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bifidobacterium longum</td>
+            <td>05f8c3759a6ffbf39740df04dcfc45bb</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=216816'">216816</a></td>
+            <td>33</td>
+            <td>species</td>
+            <td>6295</td>
+            <td>1145</td>
+            <td>650</td>
+            <td>4500</td>
+            <td>18.19</td>
+            <td>136.36</td>
+            <td>O’Callaghan 2015</td>
+            <td>https://doi.org/10.1186/s12864-015-1968-4</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bifidobacterium breve</td>
+            <td>dc73e15d1c04d460d0f7a749e5e91f4c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1685'">1685</a></td>
+            <td>8</td>
+            <td>species</td>
+            <td>2247</td>
+            <td>1323</td>
+            <td>498</td>
+            <td>426</td>
+            <td>58.88</td>
+            <td>53.25</td>
+            <td>Bottacini 2014</td>
+            <td>https://doi.org/10.1186/1471-2164-15-170</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Gardnerella vaginalis</td>
+            <td>afd6c071885f486fc17c7c1597ebfc70</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2702'">2702</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>1785</td>
+            <td>846</td>
+            <td>387</td>
+            <td>552</td>
+            <td>47.39</td>
+            <td>184</td>
+            <td>Yeoman 2010</td>
+            <td>https://doi.org/10.1371/journal.pone.0012411</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Propionibacterium acnes</td>
+            <td>97347ae0fecda7824f003c36aa14aa73</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1747'">1747</a></td>
+            <td>82</td>
+            <td>species</td>
+            <td>3136</td>
+            <td>1888</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>60.2</td>
+            <td>-11</td>
+            <td>Tomida 2013</td>
+            <td>10.1128/mBio.00003-13</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Porphyromonas gingivalis</td>
+            <td>ac626f8c98d7532701dd7950618711d5</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=837'">837</a></td>
+            <td>22</td>
+            <td>species</td>
+            <td>4021</td>
+            <td>1283</td>
+            <td>1312</td>
+            <td>1426</td>
+            <td>31.91</td>
+            <td>64.82</td>
+            <td>Dashper 2017</td>
+            <td>https://doi.org/10.3389/fmicb.2017.00048</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Elizabethkingia</td>
+            <td>c9b1d7cf0473b5b360048dc366fcdbef</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=308865'">308865</a></td>
+            <td>12</td>
+            <td>genus</td>
+            <td>5575</td>
+            <td>2589</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>46.44</td>
+            <td>-11</td>
+            <td>Teo 2014</td>
+            <td>https://doi.org/10.1093/gbe/evu094</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira alexanderi</td>
+            <td>de462212f6aa04f89d69d050880c4d32</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=100053'">100053</a></td>
+            <td>5</td>
+            <td>species</td>
+            <td>7369</td>
+            <td>3062</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>41.55</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira alstoni</td>
+            <td>79105332056aa029bde0fbe0368e7c5c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28452'">28452</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>5645</td>
+            <td>3711</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>65.74</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira borgpetersenii</td>
+            <td>4ee10f18edaeaac9af63cfb679ebe268</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=174'">174</a></td>
+            <td>10</td>
+            <td>species</td>
+            <td>8987</td>
+            <td>2979</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>33.15</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira interrogans</td>
+            <td>a1efcdb79195d89500fb4c29e6a9f690</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=173'">173</a></td>
+            <td>62</td>
+            <td>species</td>
+            <td>25725</td>
+            <td>2500</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>9.72</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira kirschneri</td>
+            <td>93b33d6b92be6232a75e94f974fc22f7</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29507'">29507</a></td>
+            <td>2</td>
+            <td>species</td>
+            <td>5104</td>
+            <td>3254</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>63.75</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira noguchii</td>
+            <td>0116b26099b00507ce242eec5ab7a1ee</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28182'">28182</a></td>
+            <td>5</td>
+            <td>species</td>
+            <td>7348</td>
+            <td>3071</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>41.79</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira santarosai</td>
+            <td>7c2d6d01992584a072fe6b22515972e0</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28183'">28183</a></td>
+            <td>7</td>
+            <td>species</td>
+            <td>8174</td>
+            <td>2985</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>36.52</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira weilii</td>
+            <td>33c9b62e085b6b422b5104474c2e1f55</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28184'">28184</a></td>
+            <td>8</td>
+            <td>species</td>
+            <td>9114</td>
+            <td>2806</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>30.79</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Treponema pedis</td>
+            <td>11fac57ae41947ff9974275e7fed8a4f</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=409322'">409322</a></td>
+            <td>6</td>
+            <td>species</td>
+            <td>8244</td>
+            <td>988</td>
+            <td>3800</td>
+            <td>3456</td>
+            <td>11.98</td>
+            <td>576</td>
+            <td>Svartstrom 2013</td>
+            <td>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0071281</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Treponema denticola</td>
+            <td>30bf783be984273f4f6c5a00684d7ce0</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=158'">158</a></td>
+            <td>12</td>
+            <td>species</td>
+            <td>7269</td>
+            <td>1115</td>
+            <td>3466</td>
+            <td>2688</td>
+            <td>15.34</td>
+            <td>224</td>
+            <td>Svartstrom 2013</td>
+            <td>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0071281</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Fusobacterium nucleatum</td>
+            <td>8bf37098a9e7383401fbd1de44dc7525</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=851'">851</a></td>
+            <td>21</td>
+            <td>species</td>
+            <td>6666</td>
+            <td>880</td>
+            <td>2850</td>
+            <td>2936</td>
+            <td>13.2</td>
+            <td>139.81</td>
+            <td>Yang Ang 2016</td>
+            <td>https://doi.org/10.1093/gbe/evw199</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Enterococcus</td>
+            <td>b23703816f033b434d736a1c396630ef</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1350'">1350</a></td>
+            <td>37</td>
+            <td>genus</td>
+            <td>29545</td>
+            <td>605</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>2.05</td>
+            <td>-11</td>
+            <td>Zhong 2017</td>
+            <td>https://doi.org/10.1016/j.micres.2016.12.009</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Ureaplasma</td>
+            <td>a061f6e12c1a0c9556f08de6b4f3bb95</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2129'">2129</a></td>
+            <td>19</td>
+            <td>genus</td>
+            <td>1020</td>
+            <td>515</td>
+            <td>243</td>
+            <td>262</td>
+            <td>50.49</td>
+            <td>13.79</td>
+            <td>Paralanov 2012</td>
+            <td>https://doi.org/10.1186/1471-2180-12-88</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Faecalibacterium prausnitzii</td>
+            <td>bd6bba585fd9a0aea95cf3862a343b0a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=853'">853</a></td>
+            <td>17</td>
+            <td>species</td>
+            <td>10366</td>
+            <td>1421</td>
+            <td>4480</td>
+            <td>4465</td>
+            <td>13.71</td>
+            <td>262.65</td>
+            <td>Benevides 2017</td>
+            <td>10.3389/fmicb.2017.01790</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pseudoalteromonas</td>
+            <td>6f3b644e82da54f896315fa034a95df4</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=53246'">53246</a></td>
+            <td>38</td>
+            <td>genus</td>
+            <td>22530</td>
+            <td>1571</td>
+            <td>2901</td>
+            <td>18058</td>
+            <td>6.97</td>
+            <td>475.21</td>
+            <td>Bosi 2017</td>
+            <td>10.1186/s12864-016-3382-y</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium difficile</td>
+            <td>a45eebba85e50543ebbf1fb58b1d0a7e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1496'">1496</a></td>
+            <td>248</td>
+            <td>species</td>
+            <td>6239</td>
+            <td>3368</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>53.98</td>
+            <td>-11</td>
+            <td>Knetsch 2017</td>
+            <td>10.1128/JCM.01384-17</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Campylobacter hyointestinalis</td>
+            <td>50632e18547756b0cb00f73b4ab1ff69</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=198'">198</a></td>
+            <td>20</td>
+            <td>species</td>
+            <td>3446</td>
+            <td>1271</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>36.88</td>
+            <td>-11</td>
+            <td>Wilkinson 2018</td>
+            <td>10.1038/s41598-018-20889-x.</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus subtilis</td>
+            <td>e3a94f0c59c11e152f1abe4f2211072e</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423'">1423</a></td>
+            <td>42</td>
+            <td>species</td>
+            <td>10137</td>
+            <td>1834</td>
+            <td>3969</td>
+            <td>4334</td>
+            <td>18.09</td>
+            <td>103.19</td>
+            <td>Brito 2018</td>
+            <td>10.1093/gbe/evx270</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Vibrio tapetis</td>
+            <td>a9bbf7ed3227ace7ad341593a9ee7aa8</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=52443'">52443</a></td>
+            <td>17</td>
+            <td>species</td>
+            <td>11213</td>
+            <td>3881</td>
+            <td>2378</td>
+            <td>4954</td>
+            <td>34.61</td>
+            <td>291.41</td>
+            <td>Dias 2018</td>
+            <td>10.3389/fmicb.2018.00227</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Dickeya solani</td>
+            <td>6dae0b966c35dd28ff2e887ee353b909</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1089444'">1089444</a></td>
+            <td>14</td>
+            <td>species</td>
+            <td>5020</td>
+            <td>3756</td>
+            <td>574</td>
+            <td>690</td>
+            <td>74.82</td>
+            <td>49.29</td>
+            <td>Golanowska 2018</td>
+            <td>10.3389/fmicb.2018.01940</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Comamonas</td>
+            <td>3f6ef97278ec69b24b87befd7d02600d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=283'">283</a></td>
+            <td>34</td>
+            <td>genus</td>
+            <td>22599</td>
+            <td>1009</td>
+            <td>15028</td>
+            <td>6562</td>
+            <td>4.46</td>
+            <td>193</td>
+            <td>Wu 2018</td>
+            <td>10.3389/fmicb.2018.03096</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Pandoravirus</td>
+            <td>89ae5b3de8fac9aa6c1624c310c6b15c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2060084'">2060084</a></td>
+            <td>6</td>
+            <td>genus</td>
+            <td>7477</td>
+            <td>352</td>
+            <td>960</td>
+            <td>6165</td>
+            <td>4.71</td>
+            <td>1027.5</td>
+            <td>Aherfi 2018</td>
+            <td>10.3389/fmicb.2018</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Campylobacter showae</td>
+            <td>fa269126926c3572763f0481566e802f</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=204'">204</a></td>
+            <td>11</td>
+            <td>species</td>
+            <td>4686</td>
+            <td>1260</td>
+            <td>1881</td>
+            <td>1545</td>
+            <td>26.89</td>
+            <td>140.45</td>
+            <td>Hsu 2019</td>
+            <td>10.1080/22221751.2019.1622455</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Triticum aestivum</td>
+            <td>386d00d8eb5d25a6e941d4cfe1a3b91b</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4565'">4565</a></td>
+            <td>18</td>
+            <td>species</td>
+            <td>140500</td>
+            <td>81090</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>57.72</td>
+            <td>-11</td>
+            <td>Montenegro 2017</td>
+            <td>10.1111/tpj.13515</td>
+            <td>G</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Campylobacter concisus</td>
+            <td>e1a0be13599afcc2b0136164e5abb2df</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=199'">199</a></td>
+            <td>53</td>
+            <td>species</td>
+            <td>14527</td>
+            <td>541</td>
+            <td>2410</td>
+            <td>11576</td>
+            <td>3.72</td>
+            <td>218.42</td>
+            <td>Gemmell 2018</td>
+            <td>10.1038/s41426-018-0118-x.</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Serratia marcescens</td>
+            <td>43c96dd52f806160cbacd34b0b4a1c61</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615'">615</a></td>
+            <td>45</td>
+            <td>species</td>
+            <td>19469</td>
+            <td>3155</td>
+            <td>7847</td>
+            <td>8467</td>
+            <td>16.21</td>
+            <td>188.16</td>
+            <td>Abreo 2019</td>
+            <td>10.1038/s41598-018-37118-0</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Acidihalobacter</td>
+            <td>50c68399633c440fec290fdcb9b6b0e6</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1765964'">1765964</a></td>
+            <td>4</td>
+            <td>genus</td>
+            <td>6243</td>
+            <td>1422</td>
+            <td>1496</td>
+            <td>3325</td>
+            <td>22.78</td>
+            <td>831.25</td>
+            <td>Khaleque 2019</td>
+            <td>10.3389/fmicb.2019.00155</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus velezensis</td>
+            <td>888832687f5cb295b7bd914a07a7ed7a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=492670'">492670</a></td>
+            <td>46</td>
+            <td>species</td>
+            <td>8907</td>
+            <td>2952</td>
+            <td>3428</td>
+            <td>2527</td>
+            <td>33.14</td>
+            <td>54.93</td>
+            <td>Wang 2019</td>
+            <td>10.4014/jmb.1901.01040.</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Sphingopyxis</td>
+            <td>f192a78c6d6559af2c53b8afb6d98b9c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=165697'">165697</a></td>
+            <td>44</td>
+            <td>genus</td>
+            <td>28914</td>
+            <td>734</td>
+            <td>7522</td>
+            <td>20658</td>
+            <td>2.54</td>
+            <td>469.5</td>
+            <td>Kaminski 2019</td>
+            <td>10.3390/genes10090688</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Staphylococcus haemolyticus</td>
+            <td>7c5bc85d338e54367167df54af72ae08</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1283'">1283</a></td>
+            <td>169</td>
+            <td>genus</td>
+            <td>9007</td>
+            <td>1522</td>
+            <td>4794</td>
+            <td>2691</td>
+            <td>16.9</td>
+            <td>15.92</td>
+            <td>Pain 2019</td>
+            <td>10.3389/fmicb.2019.0209</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Enterobacter bugandensis</td>
+            <td>82bfc56cd5d9bcb32168b9567dac625d</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=881260'">881260</a></td>
+            <td>39</td>
+            <td>species</td>
+            <td>11682</td>
+            <td>3167</td>
+            <td>3785</td>
+            <td>4730</td>
+            <td>27.11</td>
+            <td>121.28</td>
+            <td>Matteoli 2019</td>
+            <td>10.1016/j.ygeno.2019.07.003</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium tetani</td>
+            <td>92dd69b51568388df4a348513917fb3a</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1513'">1513</a></td>
+            <td>10</td>
+            <td>species</td>
+            <td>2214</td>
+            <td>205</td>
+            <td>1115</td>
+            <td>877</td>
+            <td>9.26</td>
+            <td>87.7</td>
+            <td>Cruz Morales 2019</td>
+            <td>10.1093/gbe/evz096</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium paraputrificum</td>
+            <td>ad951ea6d4355cdd45107dcfc2765150</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29363'">29363</a></td>
+            <td>4</td>
+            <td>species</td>
+            <td>2704</td>
+            <td>205</td>
+            <td>1452</td>
+            <td>1021</td>
+            <td>7.58</td>
+            <td>255.25</td>
+            <td>Cruz Morales 2019</td>
+            <td>10.1093/gbe/evz096</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium perfringens</td>
+            <td>94a6cf9e030a8a95a07c25e726ab29ce</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1502'">1502</a></td>
+            <td>55</td>
+            <td>species</td>
+            <td>2044</td>
+            <td>205</td>
+            <td>1276</td>
+            <td>547</td>
+            <td>10.03</td>
+            <td>9.95</td>
+            <td>Cruz Morales 2019</td>
+            <td>10.1093/gbe/evz096</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Clostridium ventriculi</td>
+            <td>64fd495b1e772d46759b704f89999727</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1267'">1267</a></td>
+            <td>3</td>
+            <td>species</td>
+            <td>2040</td>
+            <td>205</td>
+            <td>1091</td>
+            <td>732</td>
+            <td>10.05</td>
+            <td>244</td>
+            <td>Cruz Morales 2019</td>
+            <td>10.1093/gbe/evz096</td>
+            <td>C</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Bacillus cereus</td>
+            <td>8e22756db30e1e4b0b09105a8203ce43</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1396'">1396</a></td>
+            <td>83</td>
+            <td>species</td>
+            <td>28171</td>
+            <td>2891</td>
+            <td>19514</td>
+            <td>5766</td>
+            <td>10.26</td>
+            <td>69.47</td>
+            <td>Blaustein 2019</td>
+            <td>10.1128/mSystems.00281-18</td>
+            <td>?</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Staphylococcus aureus</td>
+            <td>9b01c58acac6f28ebd7610ae27d45d2c</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280'">1280</a></td>
+            <td>106</td>
+            <td>species</td>
+            <td>6847</td>
+            <td>1935</td>
+            <td>3285</td>
+            <td>1627</td>
+            <td>28.26</td>
+            <td>15.35</td>
+            <td>Blaustein 2019</td>
+            <td>10.1128/mSystems.00281-18</td>
+            <td>?</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Ganoderma boninense</td>
+            <td>2f73f4a685ba4d523e0b2bd3dffaf8d7</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=34458'">34458</a></td>
+            <td>9</td>
+            <td>species</td>
+            <td>35121</td>
+            <td>4898</td>
+            <td>28318</td>
+            <td>1905</td>
+            <td>13.95</td>
+            <td>211.67</td>
+            <td>Sulaiman 2018</td>
+            <td>https://tinyurl.com/634ej6wv</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Leptospira</td>
+            <td>ff1a563dc5bb45b0b2c083e0eeb0d251</td>
+            <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=171'">171</a></td>
+            <td>102</td>
+            <td>genus</td>
+            <td>57765</td>
+            <td>1023</td>
+            <td>-11</td>
+            <td>-11</td>
+            <td>1.77</td>
+            <td>-11</td>
+            <td>Xu 2016</td>
+            <td>10.1038/srep20020</td>
+            <td>C</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+      <tr>
+                <td>Arabidopsis</td>
+                <td>6c906784d19dd0d1bbd9a7336b74a804</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3701'">3701</a></td>
+                <td>7</td>
+                <td>genus</td>
+                <td>30000</td>
+                <td>24000</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td>0.80</td>
+                <td>-11</td>
+                <td></td>
+                <td>https://doi.org/10.1038/s41467-020-14779-y</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Arthrobacter ipsi</td>
+                <td>753b550ff75c7d549af4bfc95ca4faa2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2716202'">2716202</a></td>
+                <td>22</td>
+                <td>species</td>
+                <td>#REF!</td>
+                <td>252</td>
+                <td>12347</td>
+                <td>25562</td>
+                <td>#REF!</td>
+                <td>1161.91</td>
+                <td></td>
+                <td>https://doi.org/10.1007/s00248-020-01593-8</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Bacillus subtilis</td>
+                <td>587ab989c7a8b1f4497c0ea913c91114</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423'">1423</a></td>
+                <td>145</td>
+                <td>species</td>
+                <td>19447</td>
+                <td>1009</td>
+                <td>10769</td>
+                <td>7669</td>
+                <td>0.05</td>
+                <td>52.89</td>
+                <td></td>
+                <td>https://doi.org/10.1093/bib/bbaa013</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Bacillus subtilis</td>
+                <td>621ab52af43602212fda6db0de890bb3</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423'">1423</a></td>
+                <td>135</td>
+                <td>species</td>
+                <td>15675</td>
+                <td>1191</td>
+                <td>8186</td>
+                <td>6298</td>
+                <td>0.08</td>
+                <td>46.65</td>
+                <td></td>
+                <td>https://doi.org/10.1093/bib/bbaa013</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Bacillus subtilis</td>
+                <td>b055e4899396f6981e5ef70770936cc0</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423'">1423</a></td>
+                <td>130</td>
+                <td>species</td>
+                <td>13742</td>
+                <td>2150</td>
+                <td>7176</td>
+                <td>4416</td>
+                <td>0.16</td>
+                <td>33.97</td>
+                <td></td>
+                <td>https://doi.org/10.1093/bib/bbaa013</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Brenneria</td>
+                <td>d8ef405cffcb252bf4f8a960cee643f9</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=71655'">71655</a></td>
+                <td>24</td>
+                <td>genus</td>
+                <td>47402</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td></td>
+                <td>-11</td>
+                <td></td>
+                <td>https://doi.org/10.1094/PHYTO-04-20-0129-FI</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Burkholderia gladioli</td>
+                <td>9f37c4d12b745c48eadffc26222d4519</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28095'">28095</a></td>
+                <td>15</td>
+                <td>species</td>
+                <td>11403</td>
+                <td>4736</td>
+                <td>3598</td>
+                <td>3069</td>
+                <td>0.42</td>
+                <td>204.60</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms9061123</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>chlamydiae</td>
+                <td>4f647e8f0c14240be352d375effbad35</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=204428'">204428</a></td>
+                <td>96</td>
+                <td>genus</td>
+                <td>37380</td>
+                <td>375</td>
+                <td>5999</td>
+                <td>-11</td>
+                <td>0.01</td>
+                <td>-11.00</td>
+                <td></td>
+                <td>https://doi.org/10.1038/s41467-021-24294-3</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Clostridium difficile</td>
+                <td>c88569ae2e2015a3dce145825e82d1e3</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1496'">1496</a></td>
+                <td>451</td>
+                <td>species</td>
+                <td>9924</td>
+                <td>2899</td>
+                <td>4057</td>
+                <td>2968</td>
+                <td>0.29</td>
+                <td>6.58</td>
+                <td></td>
+                <td>https://doi.org/10.1073/pnas.2119396119</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Clostridium neonatale</td>
+                <td>2947ef80633f798ae9ae7a1ea4c8eae2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=137838'">137838</a></td>
+                <td>9</td>
+                <td>species</td>
+                <td>6840</td>
+                <td>3387</td>
+                <td>1600</td>
+                <td>1820</td>
+                <td>0.50</td>
+                <td>202.22</td>
+                <td></td>
+                <td>https://doi.org/10.1099/mgen.0.000813</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Dehalococcoides</td>
+                <td>dbc08c0ddbee39dcba8a36bf98f8715b</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=61434'">61434</a></td>
+                <td>26</td>
+                <td>genus</td>
+                <td>3114</td>
+                <td>952</td>
+                <td>1305</td>
+                <td>857</td>
+                <td>0.31</td>
+                <td>32.96</td>
+                <td></td>
+                <td>https://doi.org/10.1128/aem.02181-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Delftia tsuruhatensis</td>
+                <td>150f4c774f5953572de2a2a5cc61cd7f</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=180282'">180282</a></td>
+                <td>15</td>
+                <td>species</td>
+                <td>13901</td>
+                <td>4045</td>
+                <td>5098</td>
+                <td>4758</td>
+                <td>0.29</td>
+                <td>317.20</td>
+                <td></td>
+                <td>https://doi.org/10.1128/spectrum.02072-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Dickeya solani</td>
+                <td>c7ca6cb892a184440ce62018a68812d1</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1089444'">1089444</a></td>
+                <td>22</td>
+                <td>species</td>
+                <td>4400</td>
+                <td>3726</td>
+                <td>318</td>
+                <td>356</td>
+                <td>0.85</td>
+                <td>16.18</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s12864-020-06863-w</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Echinicola marina </td>
+                <td>c5690b82840bde9fabaf8fb3c04ba47f</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2859768'">2859768</a></td>
+                <td>7</td>
+                <td>species</td>
+                <td>10145</td>
+                <td>2281</td>
+                <td>2676</td>
+                <td>5188</td>
+                <td>0.22</td>
+                <td>741.14</td>
+                <td></td>
+                <td>https://doi.org/10.1038/s41598-021-03683-0</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Enterobacteria</td>
+                <td>06997100c044b97499bcd0d279a1a121</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=543'">543</a></td>
+                <td>60</td>
+                <td>family </td>
+                <td>17728</td>
+                <td>2530</td>
+                <td>9394</td>
+                <td>5804</td>
+                <td>0.14</td>
+                <td>96.73</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.synbio.2022.04.011</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Fragaria</td>
+                <td>a67278b225d1dd54f1e3f1975a05bd91</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3746'">3746</a></td>
+                <td>7</td>
+                <td>genus</td>
+                <td>25687</td>
+                <td>10665</td>
+                <td>13765</td>
+                <td>1257</td>
+                <td>0.42</td>
+                <td>179.57</td>
+                <td></td>
+                <td>https://doi.org/10.1073/pnas.2105431118</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Francisella</td>
+                <td>b036f2e3ad49a3ede04051be238314a9</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=262'">262</a></td>
+                <td>63</td>
+                <td>genus</td>
+                <td>4053</td>
+                <td>709</td>
+                <td>2179</td>
+                <td>897</td>
+                <td>0.17</td>
+                <td>14.24</td>
+                <td></td>
+                <td>http://doi.org/10.3389/fmicb.2020.01928</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Gallus gallus</td>
+                <td>c64542829710d16411952e7af83466aa</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9031'">9031</a></td>
+                <td>268</td>
+                <td>species</td>
+                <td>20941</td>
+                <td>15205</td>
+                <td>2742</td>
+                <td>1976</td>
+                <td>0.73</td>
+                <td>7.37</td>
+                <td></td>
+                <td>https://doi.org/10.1093/molbev/msab231</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Gallus gallus</td>
+                <td>94afaeac272818cde37aac5effbb3b65</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9031'">9031</a></td>
+                <td>20</td>
+                <td>species</td>
+                <td>19223</td>
+                <td>4915</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td>0.26</td>
+                <td>-0.55</td>
+                <td></td>
+                <td>https://doi.org/10.1093/molbev/msac066</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Geobacillus</td>
+                <td>af8f7d77c8fa457101ba87822f43b0e6</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1891658'">1891658</a></td>
+                <td>32</td>
+                <td>genus</td>
+                <td>14913</td>
+                <td>940</td>
+                <td>5304</td>
+                <td>8496</td>
+                <td>0.06</td>
+                <td>265.50</td>
+                <td></td>
+                <td>https://doi.org/10.3390/ijms21093393</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Glycine max</td>
+                <td>c4b765f36c1764a277b24835f689e39c</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3847'">3847</a></td>
+                <td>204</td>
+                <td>species</td>
+                <td>54531</td>
+                <td>49431</td>
+                <td>4803</td>
+                <td>297</td>
+                <td>0.91</td>
+                <td>1.46</td>
+                <td></td>
+                <td>https://doi.org/10.1111/pbi.13600</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Gossypium barbadense</td>
+                <td>11e71a9d1da7ce447136e0d4a7e5a031</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3634'">3634</a></td>
+                <td>227</td>
+                <td>species</td>
+                <td>80148</td>
+                <td>68789</td>
+                <td>7663</td>
+                <td>2160</td>
+                <td>0.86</td>
+                <td>9.52</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s13059-021-02351-w</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Gossypium hirsutum</td>
+                <td>f30888f9036d2cb156880d4280225333</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3635'">3635</a></td>
+                <td>1582</td>
+                <td>species</td>
+                <td>102768</td>
+                <td>63489</td>
+                <td>9744</td>
+                <td>12434</td>
+                <td>0.62</td>
+                <td>7.86</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s13059-021-02351-w</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Guyparkeria</td>
+                <td>53235b5a8feb403bf45b92d5b02475ab</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2035712'">2035712</a></td>
+                <td>9</td>
+                <td>genus</td>
+                <td>3204</td>
+                <td>1458</td>
+                <td>909</td>
+                <td>837</td>
+                <td>0.46</td>
+                <td>93.00</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms10040724</td>
+                <td>C</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>halobacteria</td>
+                <td>a1520e82f0328941aaa0e2e09d77a1d0</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=183963'">183963</a></td>
+                <td>111</td>
+                <td>order</td>
+                <td>49311</td>
+                <td>300</td>
+                <td>37529</td>
+                <td>11784</td>
+                <td>0.01</td>
+                <td>106.16</td>
+                <td></td>
+                <td>https://doi.org/10.1038/s41598-020-77723-6</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Lactiplantibacillus plantarum</td>
+                <td>c4a3e34add932666b5b4258eabfe94f2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1590'">1590</a></td>
+                <td>127</td>
+                <td>species</td>
+                <td>16911</td>
+                <td>1436</td>
+                <td>2272</td>
+                <td>13203</td>
+                <td>0.08</td>
+                <td>103.96</td>
+                <td></td>
+                <td>https://doi.org/10.1111/jam.15199</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Laribacter hongkongensis</td>
+                <td>ff4aa4cd69045b1a45d65849d20d59e3</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=168471'">168471</a></td>
+                <td>49</td>
+                <td>species</td>
+                <td>8964</td>
+                <td>2291</td>
+                <td>1341</td>
+                <td>5332</td>
+                <td>0.26</td>
+                <td>108.82</td>
+                <td></td>
+                <td>https://doi.org/10.3389/fmicb.2022.862776</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Leptospira</td>
+                <td>c864dce80369d920a819bf313362b39f</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=171'">171</a></td>
+                <td>68</td>
+                <td>genus</td>
+                <td>24836</td>
+                <td>692</td>
+                <td>7544</td>
+                <td>16600</td>
+                <td>0.03</td>
+                <td>244.12</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.micpath.2021.105347</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Microcystis</td>
+                <td>a2dd89131ca5d133601706bade15f8a3</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1125'">1125</a></td>
+                <td>23</td>
+                <td>genus</td>
+                <td>22009</td>
+                <td>1660</td>
+                <td>8668</td>
+                <td>11681</td>
+                <td>0.08</td>
+                <td>507.87</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.hal.2022.102186</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Musa</td>
+                <td>8659cd28531cef69eb80c438e21ddf24</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4640'">4640</a></td>
+                <td>15</td>
+                <td>genus</td>
+                <td>48000</td>
+                <td>18359</td>
+                <td>29331</td>
+                <td>0</td>
+                <td>0.38</td>
+                <td>0.00</td>
+                <td></td>
+                <td>https://doi.org/10.1002/tpg2.20100</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Mycobacterium avium</td>
+                <td>0949bfd98be9e5968a8f6354ea05984d</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1764'">1764</a></td>
+                <td>12.5</td>
+                <td>species</td>
+                <td>4669</td>
+                <td>3749</td>
+                <td>699</td>
+                <td>221</td>
+                <td>0.80</td>
+                <td>17.68</td>
+                <td></td>
+                <td>https://doi.org/10.3389/fmicb.2020.01701</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Mycobacterium avium</td>
+                <td>4dceadf32931bbb4645a440043af32b5</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1764'">1764</a></td>
+                <td>14.5</td>
+                <td>species</td>
+                <td>8124</td>
+                <td>3283</td>
+                <td>2024</td>
+                <td>2817</td>
+                <td>0.40</td>
+                <td>194.28</td>
+                <td></td>
+                <td>https://doi.org/10.3389/fmicb.2020.01701</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Mycobacterium bovis</td>
+                <td>170e6082167446f1bcc0d5765514d7ff</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1765'">1765</a></td>
+                <td>70</td>
+                <td>species</td>
+                <td>9999</td>
+                <td>2736</td>
+                <td>5049</td>
+                <td>2656</td>
+                <td>0.27</td>
+                <td>37.94</td>
+                <td></td>
+                <td>https://doi.org/10.1099%2Fmgen.0.000664</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Mycobacterium tuberculosis </td>
+                <td>2dffda2016361ae4e72b6382484b703c</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1773'">1773</a></td>
+                <td>183</td>
+                <td>species</td>
+                <td>7036</td>
+                <td>1166</td>
+                <td>5870</td>
+                <td>0</td>
+                <td>0.17</td>
+                <td>0.00</td>
+                <td></td>
+                <td>https://doi.org/10.3390/antibiotics10050500</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Mytilus galloprovincialis</td>
+                <td>152e89e8c5afbb1884e9e1e32ab5b012</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29158'">29158</a></td>
+                <td>15</td>
+                <td>species</td>
+                <td>65625</td>
+                <td>45518</td>
+                <td>14820</td>
+                <td>5287</td>
+                <td>0.69</td>
+                <td>352.47</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s13059-020-02180-3</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Neisseria gonorrhoeae </td>
+                <td>97c9be872d7fc5c22ea6c01a83f289ad</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=485'">485</a></td>
+                <td>765</td>
+                <td>species</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td>247</td>
+                <td>24</td>
+                <td></td>
+                <td>0.03</td>
+                <td></td>
+                <td>https://doi.org/10.1128/spectrum.02654-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Nesterenkonia</td>
+                <td>eb7c5cf078da6125480955505a5dbbe2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=57494'">57494</a></td>
+                <td>34</td>
+                <td>genus</td>
+                <td>15024</td>
+                <td>993</td>
+                <td>2782</td>
+                <td>11249</td>
+                <td>0.07</td>
+                <td>330.85</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms10020233</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Paenibacillus polymyxa</td>
+                <td>2da44d7cf1138adbb5319e7c0932c06e</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1406'">1406</a></td>
+                <td>14</td>
+                <td>species</td>
+                <td>9345</td>
+                <td>3063</td>
+                <td>3194</td>
+                <td>3088</td>
+                <td>0.33</td>
+                <td>220.57</td>
+                <td></td>
+                <td>https://doi.org/10.1007/s10482-020-01461-y</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Pectobacterium</td>
+                <td>a126d3bcc2a29af230d3af3e445bdfab</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=122277'">122277</a></td>
+                <td>197</td>
+                <td>genus</td>
+                <td>22347</td>
+                <td>2032</td>
+                <td>13168</td>
+                <td>7147</td>
+                <td>0.09</td>
+                <td>36.28</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s12864-021-07583-5</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Plesiomonas shigelloides</td>
+                <td>14fa6d174ac70652003e11ec7cd942fa</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=703'">703</a></td>
+                <td>20</td>
+                <td>species*</td>
+                <td>1764</td>
+                <td>157</td>
+                <td>624</td>
+                <td>983</td>
+                <td>0.09</td>
+                <td>49.15</td>
+                <td></td>
+                <td>https://doi.org/10.1128/mSystems.00448-20</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Pseudomonas amygdali</td>
+                <td>da3f30b2418a1d40f2575c8abeb83617</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=47877'">47877</a></td>
+                <td>4</td>
+                <td>species</td>
+                <td>7761</td>
+                <td>3928</td>
+                <td>1023</td>
+                <td>2810</td>
+                <td>0.51</td>
+                <td>702.50</td>
+                <td></td>
+                <td>https://doi.org/10.5423/PPJ.NT.11.2021.0175</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Qipengyuania</td>
+                <td>f7f82ccb2065da30e3d601e78a11e0d2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1855416'">1855416</a></td>
+                <td>31</td>
+                <td>genus</td>
+                <td>15172</td>
+                <td>1146</td>
+                <td>5283</td>
+                <td>8743</td>
+                <td>0.08</td>
+                <td>282.03</td>
+                <td></td>
+                <td>https://doi.org/10.1128/spectrum.01264-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Raphanus</td>
+                <td>6d5a549b4d5b86fa6d6840d50cd2626f.1</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3725'">3725</a></td>
+                <td>11</td>
+                <td>genus</td>
+                <td>150757</td>
+                <td>24539</td>
+                <td>59726</td>
+                <td>66492</td>
+                <td>0.16</td>
+                <td>6044.73</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.molp.2021.08.005</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Raphanus</td>
+                <td>6d5a549b4d5b86fa6d6840d50cd2626f.2</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3725'">3725</a></td>
+                <td>11</td>
+                <td>genus</td>
+                <td>41952</td>
+                <td>15147</td>
+                <td>25709</td>
+                <td>3290</td>
+                <td>0.36</td>
+                <td>299.09</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.molp.2021.08.005</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Rhodanobacter sp.</td>
+                <td>08ac030418ae4821df27223a554dc8fa</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=75309'">75309</a></td>
+                <td>8</td>
+                <td>species</td>
+                <td>30470</td>
+                <td>2742</td>
+                <td>26119</td>
+                <td>1609</td>
+                <td>0.09</td>
+                <td>201.13</td>
+                <td></td>
+                <td>https://doi.org/10.1128/spectrum.02591-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Rhodococcus sp.</td>
+                <td>bf8d0971f228354eaa9cd4ede258176e</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1827'">1827</a></td>
+                <td>144</td>
+                <td>genus</td>
+                <td>54865</td>
+                <td>1317</td>
+                <td>45263</td>
+                <td>8285</td>
+                <td>0.02</td>
+                <td>57.53</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.scitotenv.2021.151141</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Salmonella enterica</td>
+                <td>363a69daf4b66e0174410356e1f43efd</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28901'">28901</a></td>
+                <td>44</td>
+                <td>species</td>
+                <td>10775</td>
+                <td>2847</td>
+                <td>4657</td>
+                <td>3271</td>
+                <td>0.26</td>
+                <td>74.34</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.genrep.2020.100669</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Solanum melongena (eggplant)</td>
+                <td>f419b9913e9216fc5277c178cca0b832</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4111'">4111</a></td>
+                <td>26</td>
+                <td>species</td>
+                <td>35732</td>
+                <td>31424</td>
+                <td>2478</td>
+                <td>1246</td>
+                <td>0.88</td>
+                <td>47.92</td>
+                <td></td>
+                <td>https://doi.org/10.1111/tpj.15313</td>
+                <td>G</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>sorghum</td>
+                <td>7cbf3e57d2fd4b41aa4cf50454139047</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4557'">4557</a></td>
+                <td>16</td>
+                <td>genus</td>
+                <td>44079</td>
+                <td>15867</td>
+                <td>28026</td>
+                <td>186</td>
+                <td>0.36</td>
+                <td>11.63</td>
+                <td></td>
+                <td>https://doi.org/10.1038/s41477-021-00925-x</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>soybeans</td>
+                <td>7118cc1315c6c45664e3e41dafc94643</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3846'">3846</a></td>
+                <td>26</td>
+                <td>genus</td>
+                <td>57492</td>
+                <td>20623</td>
+                <td>36842</td>
+                <td>27</td>
+                <td>0.36</td>
+                <td>1.04</td>
+                <td></td>
+                <td>https://doi.org/10.1016/j.cell.2020.05.023</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Stenotrophomonas maltophilia</td>
+                <td>91fe05cfa50a4d5079250407d76ca61c</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=40324'">40324</a></td>
+                <td>44</td>
+                <td>species</td>
+                <td>7500</td>
+                <td>2818</td>
+                <td>3650</td>
+                <td>1105</td>
+                <td>0.38</td>
+                <td>25.11</td>
+                <td></td>
+                <td>https://doi.org/10.1128/Spectrum.01420-21</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Sulfurovum</td>
+                <td>e04f01856e521ad324b131faf721720e</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=265570'">265570</a></td>
+                <td>22</td>
+                <td>genus</td>
+                <td>10263</td>
+                <td>83</td>
+                <td>-11</td>
+                <td>-11</td>
+                <td>0.01</td>
+                <td>-11</td>
+                <td></td>
+                <td>https://doi.org/10.1128/mSystems.00673-19</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>symbiotic rhizobiales</td>
+                <td>0dfa6cc96251960bf9b7fc32dad4686b</td>
+                <td>multiple</td>
+                <td>12</td>
+                <td>phenotype</td>
+                <td>37364</td>
+                <td>700</td>
+                <td>15394</td>
+                <td>21970</td>
+                <td>0.02</td>
+                <td>1830.83</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms9020407</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Thermococcales</td>
+                <td>9eb34ba7367a7233026e6576bda17d44</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2258'">2258</a></td>
+                <td>30</td>
+                <td>order</td>
+                <td>6070</td>
+                <td>775</td>
+                <td>3222</td>
+                <td>2073</td>
+                <td>0.13</td>
+                <td>69.10</td>
+                <td></td>
+                <td>https://doi.org/10.1111/1462-2920.15234</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Treponema pallidum </td>
+                <td>097ab534662b735bd8c43ae77318252a</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=160'">160</a></td>
+                <td>53</td>
+                <td>species</td>
+                <td>2112</td>
+                <td>318</td>
+                <td>1793</td>
+                <td>1</td>
+                <td>0.15</td>
+                <td>0.02</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s12864-019-6430-6</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Veillonella</td>
+                <td>68d0e54ef6bfc91440877cf62268abd3</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=29465'">29465</a></td>
+                <td>8</td>
+                <td>genus</td>
+                <td>5223</td>
+                <td>1325</td>
+                <td>3061</td>
+                <td>837</td>
+                <td>0.25</td>
+                <td>104.63</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms9081775</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Vibrio alginolyticus</td>
+                <td>03831c4cb3359a9afbb148ba8042da51</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=663'">663</a></td>
+                <td>15</td>
+                <td>species</td>
+                <td>8843</td>
+                <td>3876</td>
+                <td>4967</td>
+                <td>0</td>
+                <td>0.44</td>
+                <td>331.13</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s12864-020-6735-5</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Vibrio mimicus</td>
+                <td>47c5cd8419196b15f666405864bdaf6c</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=674'">674</a></td>
+                <td>21</td>
+                <td>species</td>
+                <td>5894</td>
+                <td>3246</td>
+                <td>650</td>
+                <td>0</td>
+                <td>0.55</td>
+                <td>0.00</td>
+                <td></td>
+                <td>https://doi.org/10.3390/microorganisms9010191</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Zymoseptoria tritici</td>
+                <td>e9478c7e31aa55da255bfc6ea3d21540</td>
+                <td><a href="#" onclick="window.location='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1047171'">1047171</a></td>
+                <td>19</td>
+                <td>species</td>
+                <td>15474</td>
+                <td>9193</td>
+                <td>4690</td>
+                <td>1592</td>
+                <td>0.59</td>
+                <td>83.79</td>
+                <td></td>
+                <td>https://doi.org/10.1186/s12915-020-0744-3</td>
+                <td>C</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+    </table>
+    <script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+  var sortOrders = Array(document.querySelector("table").rows[0].cells.length).fill(0);
+
+function sortTable(columnIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.querySelector("table");
+  switching = true;
+  sortOrders[columnIndex] = 1 - sortOrders[columnIndex];
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < rows.length - 1; i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[columnIndex];
+      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+      var xValue = x.innerHTML.toLowerCase();
+      var yValue = y.innerHTML.toLowerCase();
+
+      var isNumeric = !isNaN(xValue) && !isNaN(yValue);
+
+      if (sortOrders[columnIndex] === 1) {
+        if (isNumeric) {
+          if (parseFloat(xValue) > parseFloat(yValue)) {
+            shouldSwitch = true;
+            break;
+          }
+        } else {
+          if (xValue > yValue) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      } else {
+        if (isNumeric) {
+          if (parseFloat(xValue) < parseFloat(yValue)) {
+            shouldSwitch = true;
+            break;
+          }
+        } else {
+          if (xValue < yValue) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+    }
+
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+      
+</script>
+  </body>
+</html>
