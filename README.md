@@ -49,7 +49,7 @@ The boolean fields DS1-DS4 correspond to subsets (see Table 3, original publicat
 
 # How to access
 
-Hit the [link](https://github.com/bcpl-certh/kurimu/catalog.html) to start browsing Kurīmu.
+Hit the [link](https://github.com/bcpl-certh/kurimu/index.html) to start browsing Kurīmu.
 
 # List with the pangenome analysis methods and hyperlinks
 
