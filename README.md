@@ -19,7 +19,7 @@ The Kurīmu data collection offers a variety of organized and ready to use infor
 
 -Pangenome: The official scientific name of the taxon; please note that in some cases there are phenotypic (polyphyletic) groups, such as photosynthetic prokaryotes
 
--Unique_ID: A unique identifier for the organism constructed with MD5
+-Unique_ID: A unique identifier for the organism constructed with MD5 using the Pangenome (name), Effective (size) and Reference (first author name and year of publication)
 
 -NCBI_txid: The Taxonomy identifier provided by the NCBI database linking to other data resources
 
@@ -51,7 +51,7 @@ The boolean fields DS1-DS4 correspond to subsets (see Table 3, original publicat
 
 Hit the [link](https://bcpl-certh.github.io/kurimu/) to start browsing Kurīmu.
 
-# List with the pangenome analysis methods and hyperlinks
+# List of pangenome analysis methods with hyperlinks
 
 |A                                             |K|<span style="font-weight:normal">[panX](https://pangenome.org/)</span>|                                                                                      
 | :--------------------------------------------: | :--------------------------------------------: | :--------------------------------------------: |                                                                                       
